@@ -1,0 +1,47 @@
+.container.contact__container {
+  width: 30%;
+  gap: 12%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background: transparent;
+  border: 2px solid var(--color-bg-varient);
+  resize: none;
+  color: var(--color-white);
+  font-family: "Montserrat", sans-serif;
+  font-size: medium;
+}
+.btn {
+  font-family: "Montserrat", sans-serif;
+  font-size: medium;
+  font-weight: 600;
+}
+
+/* ===== MEDIA CONFIG (Tablets) ===== */
+@media screen and (max-width: 1024px) {
+  .container.contact__container {
+    width: 60%;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* ===== MEDIA CONFIG (Mobiles) ===== */
+@media screen and (max-width: 600px) {
+  .container.contact__container {
+    width: var(--container-width-md);
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
