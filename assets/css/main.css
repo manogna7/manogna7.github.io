@@ -1213,7 +1213,7 @@ body {
   }
 }
 .contact--lockup .modal {
-  padding: 45px 45px;
+  padding: 25px 25px;
   text-align: center;
   background-color: #0c0c0c;
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.75);
@@ -1245,9 +1245,11 @@ body {
   background-color: #ea4c89;
 }
 .contact--lockup .modal--options li:nth-child(3) {
-  margin-bottom: 0;
   background-color: #006370;
-  text-transform: uppercase;
+}
+.contact--lockup .modal--options li:nth-child(4) {
+  margin-bottom: 0;
+  background-color: #be5b0a;
 }
 .contact--lockup .modal--options a {
   display: block;
