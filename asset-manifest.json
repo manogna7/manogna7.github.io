@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/manogna7.github.io/static/css/main.a0e14f59.css",
-    "main.js": "/manogna7.github.io/static/js/main.f818b692.js",
-    "static/media/img1.png": "/manogna7.github.io/static/media/img1.3034e4ccaa3b6115431f.png",
-    "static/media/profile.jpg": "/manogna7.github.io/static/media/profile.f549a8505b4cf506a8ea.jpg",
-    "static/media/astro2.png": "/manogna7.github.io/static/media/astro2.b82ffefff13de0ac71f8.png",
-    "static/media/durity.png": "/manogna7.github.io/static/media/durity.438b6a3ff14b320654f3.png",
-    "static/media/manogna.pdf": "/manogna7.github.io/static/media/manogna.f5013802c2ac97b73553.pdf",
-    "index.html": "/manogna7.github.io/index.html",
-    "main.a0e14f59.css.map": "/manogna7.github.io/static/css/main.a0e14f59.css.map",
-    "main.f818b692.js.map": "/manogna7.github.io/static/js/main.f818b692.js.map"
+    "main.css": "/static/css/main.a0e14f59.css",
+    "main.js": "/static/js/main.4e6467ab.js",
+    "static/media/img1.png": "/static/media/img1.3034e4ccaa3b6115431f.png",
+    "static/media/profile.jpg": "/static/media/profile.f549a8505b4cf506a8ea.jpg",
+    "static/media/astro2.png": "/static/media/astro2.b82ffefff13de0ac71f8.png",
+    "static/media/durity.png": "/static/media/durity.438b6a3ff14b320654f3.png",
+    "static/media/manogna.pdf": "/static/media/manogna.f5013802c2ac97b73553.pdf",
+    "index.html": "/index.html",
+    "main.a0e14f59.css.map": "/static/css/main.a0e14f59.css.map",
+    "main.4e6467ab.js.map": "/static/js/main.4e6467ab.js.map"
   },
   "entrypoints": [
     "static/css/main.a0e14f59.css",
-    "static/js/main.f818b692.js"
+    "static/js/main.4e6467ab.js"
   ]
 }
