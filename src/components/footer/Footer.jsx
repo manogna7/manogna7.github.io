@@ -10,7 +10,7 @@ const Footer = () => {
     <footer>
       <ul className="permalinks">
         <li>
-          <a href="#">Home</a>
+          <a href="/#">Home</a>
         </li>
         <li>
           <a href="#about">About</a>
@@ -30,10 +30,10 @@ const Footer = () => {
       </ul>
 
       <div className="footer__socials">
-        <a href="https://www.linkedin.com/in/manognach/" target="_blank">
+        <a href="https://www.linkedin.com/in/manognach/" target="_blank" rel="noreferrer">
           <BsLinkedin />
         </a>
-        <a href="https://github.com/manogna7" target="_blank">
+        <a href="https://github.com/manogna7" target="_blank" rel="noreferrer">
           <FaGithub />
         </a>
         <a href="manogna6864@gmail.com">
@@ -46,7 +46,7 @@ const Footer = () => {
 
       <div className="footer__copyright">
         <small>
-          Last Updated 15 February, 2023 <br></br>&copy; Manogna Challoju. All
+          Last Updated 18 June, 2023 <br></br>&copy; Manogna Challoju. All
           Rights Reserved.
         </small>
       </div>
