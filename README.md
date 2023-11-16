@@ -1,24 +1,29 @@
-# Personal Portfolio website built in React
+# Personal Portfolio Website in React
 
-Website Link: [manogna7.github.io](https://manogna7.github.io/)
+**Website Link:** [manogna7.github.io](https://manogna7.github.io/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This personal portfolio website is crafted using [Create React App](https://github.com/facebook/create-react-app), providing a dynamic and engaging showcase of skills and projects. Feel free to explore and get to know me better!
 
-## Available Scripts
+## Project Structure
 
-In the project directory, you can run:
+The project structure includes the following key scripts:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Launches the application in development mode.\
+Visit [http://localhost:3000](http://localhost:3000) to view it in your browser. The page automatically reloads upon making changes, and any lint errors are displayed in the console.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 ### `npm install react-icons --save`
 
+This script installs the necessary dependencies for integrating React Icons into the project, enhancing the visual appeal and functionality.
+
 ### `npm test`
+
+Execute this script to run tests for the application.
+
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Builds the application for production in the `build` folder.\
+This process optimizes the React bundle for the best performance in a production environment.
+
+Feel free to navigate through the website and explore the various sections highlighting my projects, skills, and experiences. Your feedback is always welcome!
