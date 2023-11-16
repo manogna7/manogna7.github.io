@@ -39,14 +39,14 @@ const Footer = () => {
         <a href="manogna6864@gmail.com">
           <MdOutlineEmail />
         </a>
-        <a href="tel:9963751640">
+        <a href="tel:5412862244">
           <FiPhoneCall />
         </a>
       </div>
 
       <div className="footer__copyright">
         <small>
-          Last Updated 18 June, 2023 <br></br>&copy; Manogna Challoju. All
+          Last Updated 15 November, 2023 <br></br>&copy; Manogna Challoju. All
           Rights Reserved.
         </small>
       </div>

@@ -23,7 +23,7 @@ const About = () => {
             <article className="about__card">
               <FaAward className="about__name" />
               <h5>Experience</h5>
-              <small>2 Years</small>
+              <small>2+ Years</small>
             </article>
             <article className="about__card">
               <FiUsers className="about__name" />
@@ -45,15 +45,16 @@ const About = () => {
           <p align="justify">
             Hello there!
             <br />
-            Turning imagination to reality through code or brushstrokes is what
-            sets my soul on fire. I got into development because computers have
-            always fascinated me and I am perpetually working on improving my
-            skills one bug at a time. Just seeing code getting converted to
-            things we regularly use, like a web search or something as simple as
-            cursor click, these are no less than magic to me. I'm all about
+            Turning imagination into reality through code or brushstrokes is
+            what makes me feel alive. I got into development because computers
+            have always fascinated me, and I am perpetually working on improving
+            my skills one bug at a time. Just seeing code getting converted to
+            things we regularly use, like a navigation or something as simple as
+            a cursor click, these are no less than magic to me. I'm all about
             bringing creativity and tech together to make something unique.
-            Right now, I'm just setting off on this thrilling journey and
-            striving to create something that would outlive me.
+            Currently, I'm just starting this thrilling journey and determined
+            to create something that would outlive me. 
+            
             <br />
             Thank you for stopping by and do reach out to me if you have
             something to talk about! :)

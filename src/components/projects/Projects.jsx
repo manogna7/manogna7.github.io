@@ -39,7 +39,7 @@ const Projects = () => {
             <img src={require("./4.png")} alt="" />
           </div>
           <center>
-            <h3>FebaTech </h3>
+            <h3>ONTAP</h3>
           </center>
         </article>
 
@@ -63,7 +63,7 @@ const Projects = () => {
 
         <article className="projects__item">
           <div className="projects__item-image">
-            <img src={require("./5.png")} alt="" />
+            <img src={require("./8.png")} alt="" />
           </div>
           <center>
             <h3>ILS WIE Leadership Summit</h3>

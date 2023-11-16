@@ -1,8 +1,9 @@
 import React from "react";
 import "./testimonials.css";
-import img1 from "../../assets/img1.png";
+import img1 from "../../assets/img1.jpg";
 import img2 from "../../assets/img2.png";
 import img3 from "../../assets/img3.png";
+import img4 from "../../assets/img4.png";
 
 // import Swiper core and required modules
 import { Pagination } from "swiper";
@@ -30,9 +31,28 @@ const Testimonials = () => {
           <div className="client__avatar">
             <img src={img2} alt="Avatar Two" />
           </div>
+          <h3 className="client__name">Geethanjali Kommu</h3>
+          <h5>Senior Software Engineer | FactSet Research Systems</h5>
+
+          <small className="client__review">
+            Manogna and I worked on same team as full stack developers in
+            Factset. She worked on bug resolutions, feature enhancements, and
+            new features development. She understands the problem very well and
+            researches for the different ways to do it. Her ability to juggle
+            multiple projects was unlike any I've seen. She is a combination of
+            patience, 'student for life' mindset, and has good technical skills.
+            I'm sure she will be a valuable addition to the next team she joins.
+          </small>
+        </SwiperSlide>
+
+        <SwiperSlide className="testimonial">
+          <div className="client__avatar">
+            <img src={img3} alt="Avatar One" />
+          </div>
           <h3 className="client__name">Venkata Ramanarao Ponnapalli</h3>
           <h5>
-            Co-Founder, AWS Cloud Solutions Architect | Febazmart Pvt. Ltd.
+            Co-Founder, AWS Cloud Solutions Architect | Feba Technologies Pvt.
+            Ltd.
           </h5>
 
           <small className="client__review">
@@ -52,23 +72,20 @@ const Testimonials = () => {
           <div className="client__avatar">
             <img src={img1} alt="Avatar One" />
           </div>
-          <h3 className="client__name">Geethanjali Kommu</h3>
-          <h5>Software Engineer III | FactSet Research Systems</h5>
+          <h3 className="client__name">McKenzie Heryford</h3>
+          <h5>Public Information Representative | Extension Communications</h5>
 
           <small className="client__review">
-            Manogna and I worked on same team as full stack developers in
-            Factset. She worked on bug resolutions, feature enhancements, and
-            new features development. She understands the problem very well and
-            researches for the different ways to do it. Her ability to juggle
-            multiple projects was unlike any I've seen. She is a combination of
-            patience, 'student for life' mindset, and has good technical skills.
-            I'm sure she will be a valuable addition to the next team she joins.
+            Manogna is very efficient and detail-oriented when working on
+            digital content maintenance audits. She learns quickly and always
+            asks insightful questions. Manogna also crowdsources for
+            troubleshooting as needed. She is an asset to our team.
           </small>
         </SwiperSlide>
 
         <SwiperSlide className="testimonial">
           <div className="client__avatar">
-            <img src={img3} alt="Avatar One" />
+            <img src={img4} alt="Avatar One" />
           </div>
           <h3 className="client__name">Ishrath</h3>
           <h5>Growth Product Manager | Durity</h5>
@@ -80,8 +97,8 @@ const Testimonials = () => {
             has been exceptional. She was able to work on critical features of
             the application, including payment processing and document
             generation, with minimal supervision and a high degree of
-            efficiency. Her work also included key design changes that have greatly
-            improved the user experience.
+            efficiency. Her work also included key design changes that have
+            greatly improved the user experience.
           </small>
         </SwiperSlide>
       </Swiper>
