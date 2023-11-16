@@ -1,107 +1,58 @@
 import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "./testimonials.css";
-import img1 from "../../assets/img1.jpg";
-import img2 from "../../assets/img2.png";
-import img3 from "../../assets/img3.png";
-import img4 from "../../assets/img4.png";
 
-// import Swiper core and required modules
-import { Pagination } from "swiper";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
+const testimonials = [
+  {
+    avatar: require("./img2.png"), // Correct usage of require for image
+    name: "Geethanjali Kommu",
+    review:
+      "Manogna and I worked on the same team as full-stack developers at Factset. She worked on bug resolutions, feature enhancements, and new feature development. She understands the problem very well and researches different ways to solve it. Her ability to juggle multiple projects was unlike any I've seen. She is a combination of patience, a 'student for life' mindset, and good technical skills. I'm sure she will be a valuable addition to the next team she joins.",
+  },
+  {
+    avatar: require("./img1.jpg"), // Correct usage of require for image
+    name: "Venkata Ramanarao Ponnapalli",
+    review:
+      "Manogna Ch. was a Full-Stack lead engineer for all FEBATECH Applications under IT Services. She was responsible for delivering business outcomes for all complex and innovative projects, client needs, and strategic business goals. She acted as a servant leader, helped stakeholders make the right decisions, and provided recommendations aligned with the company's vision. She maintains a very cordial relationship with associates, shares knowledge with the team, and has a knack for working collaboratively and delivering the best to the customer.",
+  },
+  {
+    avatar: require("./img1.jpg"), // Ensured consistent loading of the image
+    name: "McKenzie Heryford",
+    review:
+      "Manogna is very efficient and detail-oriented when working on digital content maintenance audits. She learns quickly and always asks insightful questions. Manogna also crowdsources for troubleshooting as needed. She is an asset to our team.",
+  },
+];
 
 const Testimonials = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    adaptiveHeight: true,
+  };
+
   return (
     <section id="testimonials">
-      <h5>Reviews</h5>
+      <h5>What Clients Say</h5>
       <h2>Testimonials</h2>
 
-      <Swiper
-        className="container testimonials__container"
-        modules={[Pagination]}
-        spaceBetween={40}
-        slidesPerView={1}
-        pagination={{ clickable: true }}
-      >
-        <SwiperSlide className="testimonial">
-          <div className="client__avatar">
-            <img src={img2} alt="Avatar Two" />
+      <Slider {...settings} className="testimonials__container">
+        {testimonials.map(({ avatar, name, review }, index) => (
+          <div key={index} className="testimonial">
+            <div className="client__avatar">
+              <img src={avatar} alt={name} />
+            </div>
+            <h5 className="client__name">{name}</h5>
+            <small className="client__review">{review}</small>
           </div>
-          <h3 className="client__name">Geethanjali Kommu</h3>
-          <h5>Senior Software Engineer | FactSet Research Systems</h5>
-
-          <small className="client__review">
-            Manogna and I worked on same team as full stack developers in
-            Factset. She worked on bug resolutions, feature enhancements, and
-            new features development. She understands the problem very well and
-            researches for the different ways to do it. Her ability to juggle
-            multiple projects was unlike any I've seen. She is a combination of
-            patience, 'student for life' mindset, and has good technical skills.
-            I'm sure she will be a valuable addition to the next team she joins.
-          </small>
-        </SwiperSlide>
-
-        <SwiperSlide className="testimonial">
-          <div className="client__avatar">
-            <img src={img3} alt="Avatar One" />
-          </div>
-          <h3 className="client__name">Venkata Ramanarao Ponnapalli</h3>
-          <h5>
-            Co-Founder, AWS Cloud Solutions Architect | Feba Technologies Pvt.
-            Ltd.
-          </h5>
-
-          <small className="client__review">
-            Manogna Ch. was a Full-Stack lead engineer for all FEBATECH
-            Applications under IT Services. She was responsible for delivering
-            business outcomes of all complex and innovative projects, client
-            needs, and strategic business goals. She acted as a servant leader,
-            helped stakeholders make the right decisions, and provided
-            recommendations aligned with the company's vision. She maintains a
-            very cordial relationship with the associates, shares knowledge with
-            the team, and has a knack for working collaboratively and delivering
-            the best to the customer.
-          </small>
-        </SwiperSlide>
-
-        <SwiperSlide className="testimonial">
-          <div className="client__avatar">
-            <img src={img1} alt="Avatar One" />
-          </div>
-          <h3 className="client__name">McKenzie Heryford</h3>
-          <h5>Public Information Representative | Extension Communications</h5>
-
-          <small className="client__review">
-            Manogna is very efficient and detail-oriented when working on
-            digital content maintenance audits. She learns quickly and always
-            asks insightful questions. Manogna also crowdsources for
-            troubleshooting as needed. She is an asset to our team.
-          </small>
-        </SwiperSlide>
-
-        <SwiperSlide className="testimonial">
-          <div className="client__avatar">
-            <img src={img4} alt="Avatar One" />
-          </div>
-          <h3 className="client__name">Ishrath</h3>
-          <h5>Growth Product Manager | Durity</h5>
-
-          <small className="client__review">
-            Working with Manogna has been a pleasure. Her technical skills and
-            innovative ideas have consistently impressed our team. Manogna's
-            work on our product Durity, a platform for generating legal wills,
-            has been exceptional. She was able to work on critical features of
-            the application, including payment processing and document
-            generation, with minimal supervision and a high degree of
-            efficiency. Her work also included key design changes that have
-            greatly improved the user experience.
-          </small>
-        </SwiperSlide>
-      </Swiper>
+        ))}
+      </Slider>
     </section>
   );
 };

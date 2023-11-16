@@ -12,53 +12,57 @@ const About = () => {
       <h2>About Me</h2>
 
       <div className="container about__container">
+        {/* Profile Image Section */}
         <div className="about__me">
           <div className="about__me-image">
-            <img src={require("./profile.jpg")} alt="pic" />
+            <img src={require("./profile.jpg")} alt="Manogna Challoju" />
           </div>
         </div>
 
+        {/* About Content Section */}
         <div className="about__content">
+          {/* About Cards */}
           <div className="about__cards">
             <article className="about__card">
-              <FaAward className="about__name" />
+              <FaAward className="about__icon" />
               <h5>Experience</h5>
-              <small>2+ Years</small>
+              <small>3+ Years in the Industry</small>
             </article>
             <article className="about__card">
-              <FiUsers className="about__name" />
-              <h5>Clients</h5>
-              <small>20+ Worldwide</small>
+              <FiUsers className="about__icon" />
+              <h5>Global Reach</h5>
+              <small>20+ Clients Worldwide</small>
             </article>
             <article className="about__card">
-              <VscFolderLibrary className="about__name" />
+              <VscFolderLibrary className="about__icon" />
               <h5>Projects</h5>
-              <small>50+ Completed</small>
+              <small>50+ Successful Deliveries</small>
             </article>
             <article className="about__card">
-              <FiCoffee className="about__name" />
-              <h5>Coffee</h5>
-              <small>200+ Drinks</small>
+              <FiCoffee className="about__icon" />
+              <h5>Code Fuel</h5>
+              <small>Enough Coffee to Power a Startup ☕️</small>
             </article>
           </div>
 
-          <p align="justify">
-            Hello there!
+          {/* About Text Section */}
+          <p>
+            Bringing ideas to life — whether through code or brushstrokes — is
+            what truly makes me feel alive. I got into development because
+            computers have always fascinated me, and the magic they create by
+            transforming simple commands into incredible outcomes. Every bug I
+            come across and every skill I refine brings me closer to that sense
+            of wonder. I strive to bring creativity and technology together to
+            create something that will outlive me and leave a lasting impact.
             <br />
-            Turning imagination into reality through code or brushstrokes is
-            what makes me feel alive. I got into development because computers
-            have always fascinated me, and I am perpetually working on improving
-            my skills one bug at a time. Just seeing code getting converted to
-            things we regularly use, like a navigation or something as simple as
-            a cursor click, these are no less than magic to me. I'm all about
-            bringing creativity and tech together to make something unique.
-            Currently, I'm just starting this thrilling journey and determined
-            to create something that would outlive me. 
-            
+            With almost three years of experience, I’ve had the privilege of
+            working with clients across the globe, delivering innovative
+            solutions and driving impactful results. I thrive in dynamic
+            environments, always eager to learn, grow, and tackle new
+            challenges head-on.
             <br />
-            Thank you for stopping by and do reach out to me if you have
-            something to talk about! :)
-            <br />
+            Thank you for stopping by! Feel free to reach out — I’d love to
+            connect and know about you. :)
           </p>
 
           <a href="#contact" className="btn btn-primary">

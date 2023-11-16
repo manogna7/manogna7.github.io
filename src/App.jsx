@@ -7,6 +7,7 @@ import Projects from "./components/projects/Projects";
 import Testimonials from "./components/testimonials/Testimonials";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
+import StudentActivities from "./components/activities/StudentActivities";
 
 export const App = () => {
   return (
@@ -16,6 +17,7 @@ export const App = () => {
       <About />
       <Experience />
       <Projects />
+      {/* <StudentActivities /> */}
       <Testimonials />
       <Contact />
       <Footer />
