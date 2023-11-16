@@ -17,10 +17,6 @@ Visit [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 This script installs the necessary dependencies for integrating React Icons into the project, enhancing the visual appeal and functionality.
 
-### `npm test`
-
-Execute this script to run tests for the application.
-
 ### `npm run build`
 
 Builds the application for production in the `build` folder.\
