@@ -1,5 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Source+Sans+Pro:wght@300;400;600&display=swap');
 
+/* Basic Reset and Box Model */
 * {
   margin: 0;
   padding: 0;
@@ -11,20 +12,21 @@
 }
 
 :root {
-  --color-bg: #000000;
-  --color-bg-varient: #32393f80;
-  --color-primary: #a54d25;
-  --color-primary-varient: #c96616;
-  --color-white: #fff;
-  --color-light: rgba(255, 255, 255, 0.6);
-  --color-dark: #000;
+  /* Updated Color Scheme */
+  --color-bg: #0d0d0d; /* Dark background for improved contrast */
+  --color-bg-varient: #1f1f1f; /* Slightly lighter dark for variations */
+  --color-primary: #a54d25; /* Main accent color, warm orange */
+  --color-secondary: #ffffff; /* New secondary accent, teal for contrast */
+  --color-white: #ffffff;
+  --color-light: rgba(255, 255, 255, 0.8);
+  --color-dark: #0d0d0d; /* Dark tone to match background */
   --color-banner: rgba(243, 243, 243, 0.007);
 
-  --transition: all 400rem ease;
-
+  /* Typography and Spacing */
+  --transition: all 0.3s ease; /* Adjusted for smoother, faster transitions */
   --container-width-lg: 75%;
   --container-width-md: 86%;
-  --container-sm: 90%;
+  --container-width-sm: 90%;
 }
 
 html {
@@ -35,65 +37,62 @@ html {
   display: none;
 }
 
+/* Body Styling */
 body {
   font-family: "Montserrat", sans-serif;
   background: var(--color-bg);
   color: var(--color-white);
-  line-height: 2;
+  line-height: 1.8;
   background-image: url(../src/assets/bg-texture.png);
 }
 
-/* ===== STYLES ===== */
-
+/* Container for Consistent Width */
 .container {
   width: var(--container-width-lg);
   margin: 0 auto;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-weight: 500;
+/* Headings Styling */
+h1, h2, h3, h4, h5 {
+  font-weight: 400;
+  color: var(--color-white);
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.8rem;
 }
 
 section {
   margin-top: 8rem;
 }
 
-form {
-  font-family: "Montserrat", sans-serif;
-}
-
-section > h2,
-section > h5 {
+/* Centered Section Titles */
+section > h2, section > h5 {
   text-align: center;
   color: var(--color-light);
 }
 
 section > h2 {
   color: var(--color-primary);
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
 }
 
+/* Light Text Styling */
 .text-light {
   color: var(--color-light);
 }
 
+/* Link Styling with Secondary Accent */
 a {
-  color: var(--color-primary);
+  color: var(--color-secondary);
   transition: var(--transition);
 }
 
 a:hover {
-  color: var(--color-white);
+  color: var(--color-primary);
 }
 
+/* Button Styling */
 .btn {
   width: max-content;
   display: inline-block;
@@ -111,9 +110,11 @@ a:hover {
   border-color: transparent;
 }
 
+/* Primary Button with Background */
 .btn-primary {
   background: var(--color-primary);
-  color: var(--color-bg);
+  color: var(--color-dark);
+  border: none;
 }
 
 img {
@@ -122,8 +123,21 @@ img {
   object-fit: cover;
 }
 
-/* ===== MEDIA CONFIG (Tablets) ===== */
+/* Container Styles for Cards and Sections */
+.card {
+  background: var(--color-bg-varient);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  transition: var(--transition);
+  border: 1px solid transparent;
+}
 
+.card:hover {
+  background: transparent;
+  border-color: var(--color-primary);
+}
+
+/* Media Queries for Tablet Layout */
 @media screen and (max-width: 1024px) {
   .container {
     width: var(--container-width-md);
@@ -134,14 +148,29 @@ img {
   }
 }
 
-/* ===== MEDIA CONFIG (Mobiles) ===== */
-
+/* Media Queries for Mobile Layout */
 @media screen and (max-width: 600px) {
   .container {
     width: 85%;
   }
 
   section > h2 {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+}
+
+/* Additional Styles for Icon and Text Alignment */
+.icon-text {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-primary);
+}
+
+.icon-text:hover {
+  color: var(--color-secondary);
 }

@@ -1,0 +1,301 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* Colors and Layout */
+:root {
+  --color-bg: #0d0d0d;
+  --color-primary: #ff914d;
+  --color-secondary: #ffffff;
+  --color-dark: #0d0d0d;
+  --color-light: #f3f3f3;
+  --color-pink: #ff6f91;
+  --color-inner-ear: #ffb74d;
+
+  --transition: all 0.3s ease-in-out;
+}
+header,
+.space-helmet,
+.cat-face {
+  overflow: visible !important; /* Allow ears to render outside */
+}
+
+/* Font Styling */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--color-bg);
+  color: var(--color-secondary);
+  line-height: 1.8;
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.header__container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.cta {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+.header__socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  position: absolute;
+  left: 1.5rem;
+  bottom: 3rem;
+  font-size: 1.5rem;
+}
+
+.header__socials::after {
+  content: "";
+  width: 1px;
+  height: 2rem;
+  background: var(--color-primary);
+}
+
+/* ===== SCROLL DOWN ===== */
+.scroll__down {
+  position: absolute;
+  right: 2rem; /* Offset from edge for better balance */
+  bottom: 2.5rem;
+  transform: rotate(90deg);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+h1, h2, p {
+  color: var(--color-primary);
+  margin: 0.5rem 0;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+h1 {
+  font-size: 3.5rem; /* Slightly larger */
+  margin-bottom: 1rem; /* Add space below */
+  animation-delay: 0.2s;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.8rem;
+  animation-delay: 0.4s;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem; /* Increased spacing */
+  animation-delay: 0.6s;
+}
+
+/* Cat Helmet */
+.space-helmet {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 2rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 145, 77, 0.352), transparent);
+  animation: bobbing 3s ease-in-out infinite;
+  overflow: visible; /* Allow the ears to extend beyond this container */
+}
+
+@keyframes bobbing {
+  0%, 100% {
+    transform: translateY(-3px);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+}
+
+/* Cat Face */
+.cat-face {
+  width: 200px;
+  height: 200px;
+  background: conic-gradient(#ffb74d, #ff914d);
+  clip-path: polygon(50% 0%, 85% 15%, 100% 50%, 85% 85%, 50% 100%, 15% 85%, 0% 50%, 15% 15%);
+  position: relative;
+  z-index: 2;
+}
+
+/* Ears */
+.ear {
+  position: absolute;
+  width: 100px; /* Increased size for prominence */
+  height: 100px;
+  background: var(--color-primary);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  border-radius: 5px; /* Rounded edges */
+  z-index: 1; /* Below the face */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.left-ear {
+  top: -60px; /* Higher placement */
+  left: -40px; /* Moved further outward */
+  transform: rotate(-15deg);
+}
+
+.right-ear {
+  top: -60px;
+  right: -40px; /* Moved further outward */
+  transform: rotate(15deg);
+}
+
+.ear::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: var(--color-inner-ear);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  top: 20px;
+  left: 20px;
+  border-radius: 3px;
+}
+
+/* Eyes */
+.eye {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle, #ffffff 80%, #f3f3f3 100%);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.left-eye {
+  top: 80px;
+  left: 40px;
+}
+
+.right-eye {
+  top: 80px;
+  right: 40px;
+}
+
+.pupil {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: #000;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: blink 5s infinite;
+
+}
+
+.pupil::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: var(--color-light);
+  border-radius: 50%;
+  top: 25%;
+  left: 25%;
+}
+
+/* Nose */
+.nose {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #000;
+  border-radius: 50%;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.smile {
+  position: absolute;
+  top: 150px; /* Adjusted for alignment */
+  left: 50%;
+  transform: translateX(-50%);
+  
+  width: 50px;
+  height: 25px; /* Controls the smile's height */
+}
+
+
+/* Whiskers */
+.whiskers {
+  position: absolute;
+  width: 80px;
+  height: 1px;
+  background: #000;
+}
+
+.left-whiskers {
+  top: 125px;
+  left: -50px;
+  transform: rotate(-20deg) translateY(2px);
+}
+
+.right-whiskers {
+  top: 125px;
+  right: -50px;
+  transform: rotate(20deg) translateY(2px);
+}
+
+/* Tail */
+.tail {
+  position: absolute;
+  width: 15px;
+  height: 100px;
+  background: var(--color-primary);
+  border-radius: 10px;
+  bottom: -20px;
+  right: -30px;
+  transform-origin: top;
+  animation: wagging 2s ease-in-out infinite;
+}
+
+@keyframes wagging {
+  0%, 100% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+}
+
+@keyframes blink {
+  0%, 90%, 100% {
+    height: 30px;
+  }
+  95% {
+    height: 5px;
+  }
+}

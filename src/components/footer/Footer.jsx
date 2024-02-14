@@ -46,7 +46,10 @@ const Footer = () => {
 
       <div className="footer__copyright">
         <small>
-          Last Updated 15 November, 2023 <br></br>&copy; Manogna Challoju. All
+        <em>This is still a work in progress—stay tuned for more updates!</em><br></br>
+
+          Last Updated 8 December, 2024 
+          <br></br>&copy; Manogna Challoju. All
           Rights Reserved.
         </small>
       </div>
