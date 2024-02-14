@@ -51,10 +51,19 @@ const About = () => {
             my skills one bug at a time. Just seeing code getting converted to
             things we regularly use, like a navigation or something as simple as
             a cursor click, these are no less than magic to me. I'm all about
-            bringing creativity and tech together to make something unique.
-            Currently, I'm just starting this thrilling journey and determined
-            to create something that would outlive me. 
-            
+            bringing creativity and tech together to create something that would
+            outlive me.
+            <br>
+              I have almost 3 years of experience in the field of software
+              development where I've had the opportunity to work with clients
+              worldwide, delivering innovative solutions and driving impactful
+              results. My roles have ranged from web development to research and
+              advisory, allowing me to hone my skills in both front-end and
+              back-end technologies. I've been part of projects that have
+              improved user engagement, boosted communication efficiency, and
+              streamlined processes. I thrive in dynamic environments and am
+              always seeking opportunities to learn and grow.
+            </br>
             <br />
             Thank you for stopping by and do reach out to me if you have
             something to talk about! :)
