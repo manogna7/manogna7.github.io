@@ -1,49 +1,262 @@
+/* General Styles */
 .projects__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 2.5rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
 }
 
-.projects__item {
-  background: var(--color-bg-varient);
-  padding: 1.5rem;
-  border-radius: 2rem;
-  border: 1px solid transparent;
-  transition: var(--transition);
+.projects__container h2 {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: 2rem;
 }
 
-.projects__item:hover {
-  border-color: var(--color-primary-varient);
-  background: transparent;
+/* Slider Styles */
+.slider-item {
+  padding: 1rem;
+  transition: transform 0.3s ease;
 }
 
-.projects__item-image {
-  border-radius: 1.5rem;
+.slider-item:hover {
+  transform: scale(1.05);
+}
+
+.project-card {
+  background: #2b2b2b;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   overflow: hidden;
-}
-
-.projects__item-h3 {
-  margin: 1.2rem 0 2rem;
-}
-
-.projects__item-cta {
+  cursor: pointer;
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 1rem;
+  text-align: center;
+}
+
+.project-info h3 {
+  font-size: 1.5rem;
+  color: #e0e0e0;
+  margin-bottom: 0.5rem;
+}
+
+.project-info p {
+  font-size: 1rem;
+  color: #c0c0c0;
+  margin: 0.5rem 0;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  background: #222;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.modal-content img {
+  max-width: 100%;
+  border-radius: 10px;
   margin-bottom: 1rem;
 }
 
-/* ===== MEDIA CONFIG (Tablets) ===== */
-@media screen and (max-width: 1024px) {
-  .projects__container {
-    grid-template-columns: 1fr 1fr;
-    gap: 1.2rem;
-  }
+.modal-content h2 {
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
 }
 
-/* ===== MEDIA CONFIG (Mobiles) ===== */
-@media screen and (max-width: 600px) {
-  .projects__container {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+.modal-content p {
+  font-size: 1rem;
+  color: #e0e0e0;
+  margin-bottom: 1.5rem;
+}
+
+/* Technologies as Buttons */
+.modal-tech {
+  margin-bottom: 1.5rem;
+}
+
+.modal-tech h4 {
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  font-weight: 450;
+  margin-bottom: 0.5rem;
+}
+
+.tech-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-button {
+  background: rgba(255, 127, 80, 0.2);
+  color: var(--color-white);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 450;
+  white-space: nowrap;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tech-button:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* GitHub Button */
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project-link i {
+  font-size: 1.2rem;
+}
+
+.project-link:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.project-link svg {
+  font-size: 1.2rem; /* Adjust the icon size */
+}
+
+/* Close Button */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.close-button:hover {
+  color: var(--color-primary);
+  transform: scale(1.2);
+}
+
+.close-button:focus {
+  outline: none;
+}
+
+/* Slick Carousel Customizations */
+.slick-dots li button:before {
+  color: var(--color-primary);
+  font-size: 0.8rem;
+}
+
+.slick-dots li.slick-active button:before {
+  color: var(--color-primary);
+}
+
+/* Navigation Arrows */
+.slick-arrow {
+  border-radius: 5px;
+  width: 35px;
+  height: 35px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.slick-arrow:hover {
+  transform: scale(1.1);
+}
+
+.slick-arrow:before {
+  content: '';
+}
+
+.slick-prev:after,
+.slick-next:after {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: solid var(--color-primary);
+  border-width: 0 2px 2px 0;
+}
+
+.slick-prev:after {
+  transform: rotate(135deg);
+}
+
+.slick-next:after {
+  transform: rotate(-45deg);
+}
+
+/* Positioning the Arrows */
+.slick-prev {
+  left: -45px;
+}
+
+.slick-next {
+  right: -45px;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .slick-arrow {
+    width: 30px;
+    height: 30px;
+  }
+
+  .slick-prev {
+    left: -30px;
+  }
+
+  .slick-next {
+    right: -30px;
   }
 }

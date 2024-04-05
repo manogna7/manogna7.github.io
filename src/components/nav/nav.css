@@ -1,7 +1,6 @@
 nav {
   background: rgba(0, 0, 0, 0.3);
   width: max-content;
-  display: block;
   padding: 0.7rem 1.7rem;
   z-index: 2;
   position: fixed;
@@ -21,8 +20,14 @@ nav a {
   display: flex;
   color: var(--color-light);
   font-size: 1.1rem;
+  transition: background 0.3s;
 }
 
 nav a:hover {
   background: rgba(0, 0, 0, 0.3);
+}
+
+nav a:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--color-primary);
 }

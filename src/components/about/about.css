@@ -1,20 +1,16 @@
 .about__container {
   display: grid;
-  grid-template-columns: 30% 50%;
-  gap: 15%;
+  grid-template-columns: 35% 55%; /* Balance between image and content */
+  gap: 8%; /* Compact layout */
+  align-items: center;
 }
 
 .about__me {
   width: 80%;
-  margin-left: 10rem;
+  margin: 0 auto;
   aspect-ratio: 1/1;
   border-radius: 2rem;
-  background: linear-gradient(
-    45deg,
-    transparent,
-    var(--color-primary),
-    transparent
-  );
+  background: linear-gradient(45deg, transparent, var(--color-primary), transparent);
   display: grid;
   place-items: center;
 }
@@ -23,93 +19,101 @@
   border-radius: 2rem;
   overflow: hidden;
   transform: rotate(10deg);
-  transition: var(--transition);
+  transition: transform 0.3s ease;
+  filter: grayscale(90%); /* Return to color on hover */
+
 }
 
 .about__me-image:hover {
-  transform: rotate(0);
+  transform: rotate(0); /* Smooth rotation on hover */
+  filter: grayscale(0%); /* Return to color on hover */
+
+
 }
 
 .about__cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr 1fr; /* Two columns for readability */
   gap: 1.5rem;
+  justify-content: center;
+  margin-top: 1rem;
 }
 
 .about__card {
   background: var(--color-bg-varient);
   border: 1px solid transparent;
   border-radius: 1rem;
-  padding: 1rem;
+  padding: 1.5rem;
   text-align: center;
-  transition: var(--transition);
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .about__card:hover {
-  background: transparent;
+  transform: scale(1.05); /* Slight zoom effect */
+  background: var(--color-bg); 
   border-color: var(--color-primary-varient);
-  cursor: default;
+  cursor: pointer;
 }
 
 .about__icon {
   color: var(--color-primary);
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+  transition: color 0.3s ease;
+}
+
+.about__icon:hover {
+  color: var(--color-primary-varient); /* Icon hover effect */
 }
 
 .about__card h5 {
-  font-size: 0.95rem;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
 }
 
 .about__card small {
-  font-size: 0.7rem;
+  font-size: 0.85rem;
   color: var(--color-light);
 }
 
 .about__content p {
   margin: 2rem 0 2.6rem;
   color: var(--color-light);
+  line-height: 1.8;
 }
 
-/* ===== MEDIA CONFIG (Tablets) ===== */
+/* Responsive Adjustments for Tablets */
 @media screen and (max-width: 1024px) {
   .about__container {
     grid-template-columns: 1fr;
-    gap: 0;
+    gap: 2rem;
     align-items: center;
   }
 
   .about__me {
-    width: 50%;
-    margin: 2rem auto 4rem;
+    width: 60%;
+    margin: 2rem auto;
   }
 
   .about__content {
     text-align: center;
-  }
-
-  .about__content p {
-    margin: 1rem 0 1.5rem;
   }
 }
 
-/* ===== MEDIA CONFIG (Mobiles) ===== */
+/* Responsive Adjustments for Mobile */
 @media screen and (max-width: 600px) {
   .about__me {
-    width: 50%;
-    margin: 0 auto 3rem;
+    width: 70%;
+    margin: 1rem auto;
   }
 
   .about__cards {
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .about__content {
     text-align: center;
-  }
-
-  .about__content p {
-    margin: 1.5rem 0;
+    padding: 0 1rem; /* Added padding for better readability */
   }
 }
