@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c22a841f.css",
-    "main.js": "/static/js/main.8f1e724c.js",
+    "main.js": "/static/js/main.361e57df.js",
     "static/media/5.png": "/static/media/5.202eb3ed3d9f0677fe68.png",
     "static/media/img4.png": "/static/media/img4.eccb83b872726a01a658.png",
     "static/media/8.png": "/static/media/8.ba1612c2e19cab34457a.png",
@@ -13,16 +13,16 @@
     "static/media/4.png": "/static/media/4.7ddece862451d10f3e20.png",
     "static/media/2.png": "/static/media/2.ef44b3a936aa9e1681ec.png",
     "static/media/1.png": "/static/media/1.d9f1c2b516c6eed2055e.png",
+    "static/media/manogna.pdf": "/static/media/manogna.f6acc023417729bc6920.pdf",
     "static/media/6.png": "/static/media/6.412e0eb77585f2f68c25.png",
-    "static/media/manogna.pdf": "/static/media/manogna.855383f888457a7f5058.pdf",
     "static/media/img2.png": "/static/media/img2.62ac1793b4f2676ea9e3.png",
     "static/media/img1.jpg": "/static/media/img1.52ba2f10c63ea63b5adf.jpg",
     "index.html": "/index.html",
     "main.c22a841f.css.map": "/static/css/main.c22a841f.css.map",
-    "main.8f1e724c.js.map": "/static/js/main.8f1e724c.js.map"
+    "main.361e57df.js.map": "/static/js/main.361e57df.js.map"
   },
   "entrypoints": [
     "static/css/main.c22a841f.css",
-    "static/js/main.8f1e724c.js"
+    "static/js/main.361e57df.js"
   ]
 }
