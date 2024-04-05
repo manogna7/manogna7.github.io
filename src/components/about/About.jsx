@@ -53,7 +53,7 @@ const About = () => {
             a cursor click, these are no less than magic to me. I'm all about
             bringing creativity and tech together to create something that would
             outlive me.
-            <br>
+            <br /> 
               I have almost 3 years of experience in the field of software
               development where I've had the opportunity to work with clients
               worldwide, delivering innovative solutions and driving impactful
@@ -63,7 +63,6 @@ const About = () => {
               improved user engagement, boosted communication efficiency, and
               streamlined processes. I thrive in dynamic environments and am
               always seeking opportunities to learn and grow.
-            </br>
             <br />
             Thank you for stopping by and do reach out to me if you have
             something to talk about! :)
