@@ -1,84 +1,86 @@
-import React from "react";
-import "./projects.css";
+import React, { useState } from 'react';
+import './projects.css';
+
+const projects = [
+  {
+    title: "Equalithon & Team Selection",
+    description: "Equalithon, International Women's Day 2021",
+    image: require('./1.png'),
+  },
+  {
+    title: "Assets and Distribution",
+    description: "Asset distribution system allowing seamless beneficiary management.",
+    image: require('./2.png'),
+  },
+  {
+    title: "IEEE Section Student Congress",
+    description: "Website for IEEE Hyderabad Section Student Congress 2019.",
+    image: require('./3.png'),
+  },
+  {
+    title: "Automated Web App Deployment",
+    description: "Deployment of web apps using NetApp Cloud Volume ONTAP.",
+    image: require('./4.png'),
+  },
+  {
+    title: "Artquisite",
+    description: "Art portfolio website with a unique visual layout.",
+    image: require('./5.png'),
+  },
+  {
+    title: "Employee Directory",
+    description: "A directory for employee management with intuitive UI.",
+    image: require('./6.png'),
+  },
+  {
+    title: "Cyborg Website Builder",
+    description: "AI-powered tool to assist users in building websites.",
+    image: require('./7.png'),
+  },
+  {
+    title: "IEEE Women in Engineering",
+    description: "Website for IEEE Women in Engineering International Leadership Summit.",
+    image: require('./8.png'),
+  },
+];
 
 const Projects = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const openModal = (image) => {
+    setSelectedImage(image);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null);
+    setIsModalOpen(false);
+  };
+
   return (
-    <section id="projects">
-      <h5>My Recent Work</h5>
+    <section id="projects" className="projects__container">
       <h2>Projects</h2>
-      <div className="container projects__container">
-        <article className="projects__item">
-          <div className="projects__item-image">
-            <img src={require("./2.png")} alt="" />
+      <div className="masonry-grid">
+        {projects.map((project, index) => (
+          <div key={index} className="masonry-item" onClick={() => openModal(project.image)}>
+            <div className="masonry-content">
+              <img src={project.image.default || project.image} alt={project.title} />
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+              <button className="project-link">View Project</button>
+            </div>
           </div>
-          <center>
-            <h3>Durity</h3>
-          </center>
-        </article>
-
-        <article className="projects__item">
-          <div className="projects__item-image">
-            <img src={require("./7.png")} alt="" />
-          </div>
-          <center>
-            <h3>Cyborg</h3>
-          </center>
-        </article>
-
-        <article className="projects__item">
-          <div className="projects__item-image">
-            <img src={require("./1.png")} alt="" />
-          </div>
-          <center>
-            <h3>Equalithon</h3>
-          </center>
-        </article>
-
-        <article className="projects__item">
-          <div className="projects__item-image">
-            <img src={require("./4.png")} alt="" />
-          </div>
-          <center>
-            <h3>ONTAP</h3>
-          </center>
-        </article>
-
-        <article className="projects__item">
-          <div className="projects__item-image">
-            <img src={require("./3.png")} alt="" />
-          </div>
-          <center>
-            <h3>IEEE SSC'19</h3>
-          </center>
-        </article>
-
-        <article className="projects__item">
-          <div className="projects__item-image">
-            <img src={require("./5.png")} alt="" />
-          </div>
-          <center>
-            <h3>Artquisite</h3>
-          </center>
-        </article>
-
-        <article className="projects__item">
-          <div className="projects__item-image">
-            <img src={require("./8.png")} alt="" />
-          </div>
-          <center>
-            <h3>ILS WIE Leadership Summit</h3>
-          </center>
-        </article>
-
-        <article className="projects__item">
-          <div className="projects__item-image">
-            <img src={require("./6.png")} alt="" />
-          </div>
-          <center>
-            <h3>CRUD Employee POC</h3>
-          </center>
-        </article>
+        ))}
       </div>
+      {isModalOpen && (
+        <div className="modal-overlay" onClick={closeModal}>
+          <div className="modal-content">
+            <img src={selectedImage.default || selectedImage} alt="Expanded view" className="modal-image" />
+            <button className="close-button" onClick={closeModal}>Close</button>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

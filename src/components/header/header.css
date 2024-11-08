@@ -2,6 +2,7 @@ header {
   height: 100vh;
   padding-top: 8rem;
   overflow: hidden;
+  background: var(--color-bg); /* Ensures consistent background color */
 }
 
 .header__container {
@@ -10,7 +11,7 @@ header {
   position: relative;
 }
 
-/* ===== CTA ===== */
+/* CTA Section Styling */
 .cta {
   margin-top: 2.5rem;
   display: flex;
@@ -18,16 +19,34 @@ header {
   justify-content: center;
 }
 
-/* ===== SOCIALS ===== */
+/* CTA Buttons Styling */
+.cta .btn {
+  background: var(--color-primary);
+  color: var(--color-white);
+  transition: var(--transition);
+}
+
+.cta .btn:hover {
+  background: var(--color-secondary); /* Hover effect to teal accent */
+  color: var(--color-dark);
+}
+
+/* Social Icons Styling */
 .header__socials {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.8rem;
   position: absolute;
-  left: 0;
+  left: 1rem; /* Adjusted positioning for consistency */
   bottom: 4rem;
   font-size: 1.5rem;
+  color: var(--color-light);
+  transition: color 0.3s ease;
+}
+
+.header__socials a:hover {
+  color: var(--color-primary); /* Primary color on hover */
 }
 
 .header__socials::after {
@@ -37,28 +56,35 @@ header {
   background: var(--color-primary);
 }
 
-/* ===== ASTRO ===== */
+/* Profile Image Styling */
 .me {
   background: linear-gradient(0deg, var(--color-banner), transparent);
   width: 27rem;
   position: absolute;
-  left: calc(40% - 4rem);
+  left: 50%;
+  transform: translateX(-50%);
   margin-top: 10rem;
   border-radius: 100rem 100rem 5rem 5rem;
   overflow: hidden;
 }
 
-/* ===== SCROLL DOWN ===== */
+/* Scroll Down Indicator */
 .scroll__down {
   position: absolute;
   right: -2.3rem;
   bottom: 5rem;
   transform: rotate(90deg);
-  font-weight: 500;
+  font-weight: 400;
   font-size: 1rem;
+  color: var(--color-light);
+  transition: color 0.3s ease;
 }
 
-/* ===== MEDIA CONFIG (Tablets) ===== */
+.scroll__down:hover {
+  color: var(--color-primary); /* Hover color change */
+}
+
+/* Responsive Adjustments (Tablets) */
 @media screen and (max-width: 1024px) {
   header {
     height: 100vh;
@@ -72,25 +98,19 @@ header {
     position: relative;
   }
   .me {
-    background: linear-gradient(0deg, var(--color-banner), transparent);
     width: 26rem;
-    left: calc(40% - 9rem);
     margin-top: 4rem;
-    border-radius: 100rem 100rem 5rem 5rem;
-    overflow: hidden;
   }
 }
 
-/* ===== MEDIA CONFIG (Mobiles) ===== */
+/* Responsive Adjustments (Mobiles) */
 @media screen and (max-width: 600px) {
   header {
     height: 95vh;
   }
   .me {
     width: 24rem;
-    left: calc(40% - 10rem);
     margin-top: 1rem;
-    overflow: hidden;
   }
   .header__socials,
   .scroll__down {

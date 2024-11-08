@@ -1,49 +1,104 @@
 .container.testimonials__container {
   width: 60%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 1rem;
 }
 
 .client__avatar {
   width: 4rem;
-  aspect-ratio: 1/1;
-  overflow: hidden;
+  height: 4rem;
   border-radius: 50%;
-  margin: 0 auto 1rem;
-  border: 0.4rem solid var(--color-primary-variant);
+  margin: 0 auto;
+  border: 0.3rem solid var(--color-primary-variant);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.client__avatar:hover {
+  transform: scale(1.05); /* Adds a subtle zoom effect on hover */
 }
 
 .testimonial {
-  background: var(--color-bg-varient);
+  background: var(--color-bg-variant);
   text-align: center;
   padding: 2rem;
-  border-radius: 2rem;
-  user-select: none;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.testimonial h3 {
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.testimonial h4 {
+  font-size: 1rem;
+  color: var(--color-secondary);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
 }
 
 .client__review {
   color: var(--color-light);
   font-weight: 300;
-  display: block;
-  width: 80;
-  margin: 0.8rem auto 0;
-  justify-content: center;
+  line-height: 1.6;
+  font-size: 0.9rem;
+  margin-top: 1rem;
 }
 
-/* ===== MEDIA CONFIG (Tablets) ===== */
-@media screen and (max-width: 1024px) {
+/* Dots navigation styling */
+.testimonial-dots {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-light);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot:hover {
+  background-color: var(--color-primary);
+}
+
+.dot.active {
+  background-color: var(--color-primary); /* Highlight active dot */
+  transform: scale(1.2); /* Slight enlargement to indicate active dot */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
   .container.testimonials__container {
-    width: 80%;
+    width: 85%;
+  }
+  .testimonial {
+    padding: 1.5rem;
   }
 }
 
-/* ===== MEDIA CONFIG (Mobiles) ===== */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 480px) {
   .container.testimonials__container {
-    width: var(--container-width-sm);
-    margin: 1rem;
-
+    width: 95%;
   }
-
-  .client__review {
-    width: var(--container-width-sm);
+  .testimonial h3, .testimonial h4, .client__review {
+    font-size: 0.9rem;
   }
 }
