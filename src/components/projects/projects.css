@@ -8,7 +8,7 @@
 
 .projects__container h2 {
   font-size: 2.5rem;
-  color: #ff7f50;
+  color: var(--color-primary);
   margin-bottom: 2rem;
 }
 
@@ -91,7 +91,7 @@
 
 .modal-content h2 {
   font-size: 2rem;
-  color: #ff7f50;
+  color: var(--color-primary);
   margin-bottom: 1rem;
 }
 
@@ -108,7 +108,8 @@
 
 .modal-tech h4 {
   font-size: 1.2rem;
-  color: #ff7f50;
+  color: var(--color-primary);
+  font-weight: 450;
   margin-bottom: 0.5rem;
 }
 
@@ -120,18 +121,18 @@
 
 .tech-button {
   background: rgba(255, 127, 80, 0.2);
-  color: #ff7f50;
+  color: var(--color-white);
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 450;
   white-space: nowrap;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .tech-button:hover {
-  background: #ff7f50;
-  color: #fff;
+  background: var(--color-primary);
+  color: var(--color-white);
 }
 
 /* GitHub Button */
@@ -141,8 +142,8 @@
   justify-content: center;
   gap: 0.5rem;
   text-decoration: none;
-  color: #ff7f50;
-  border: 2px solid #ff7f50;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
   padding: 0.5rem 1rem;
   border-radius: 30px;
   font-size: 1rem;
@@ -155,8 +156,8 @@
 }
 
 .project-link:hover {
-  background-color: #ff7f50;
-  color: #fff;
+  background-color: var(--color-primary);
+  color: var(--color-white);
 }
 
 .project-link svg {
@@ -170,14 +171,15 @@
   right: 10px;
   background: none;
   border: none;
-  color: #ff7f50;
+  color: var(--color-primary);
   font-size: 1.5rem;
+  font-weight: 600;
   cursor: pointer;
   transition: transform 0.2s ease, color 0.3s ease;
 }
 
 .close-button:hover {
-  color: #ff5722;
+  color: var(--color-primary);
   transform: scale(1.2);
 }
 
@@ -187,12 +189,12 @@
 
 /* Slick Carousel Customizations */
 .slick-dots li button:before {
-  color: #ff7f50;
+  color: var(--color-primary);
   font-size: 0.8rem;
 }
 
 .slick-dots li.slick-active button:before {
-  color: #ff5722;
+  color: var(--color-primary);
 }
 
 /* Navigation Arrows */
@@ -222,7 +224,7 @@
   display: inline-block;
   width: 12px;
   height: 12px;
-  border: solid #ff7f50;
+  border: solid var(--color-primary);
   border-width: 0 2px 2px 0;
 }
 
