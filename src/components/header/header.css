@@ -27,7 +27,7 @@ header {
 }
 
 .cta .btn:hover {
-  background: var(--color-secondary); /* Hover effect to teal accent */
+  background: var(--color-secondary);
   color: var(--color-dark);
 }
 

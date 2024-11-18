@@ -1,4 +1,4 @@
-/* Container Styles */
+/* General Styles */
 .projects__container {
   padding: 2rem;
   max-width: 1200px;
@@ -7,78 +7,58 @@
 }
 
 .projects__container h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #ff7f50;
   margin-bottom: 2rem;
 }
 
-/* Masonry Grid */
-.masonry-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1.5rem;
+/* Slider Styles */
+.slider-item {
+  padding: 1rem;
+  transition: transform 0.3s ease;
 }
 
-/* Masonry Item with Hover Effect */
-.masonry-item {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+.slider-item:hover {
+  transform: scale(1.05);
+}
+
+.project-card {
+  background: #2b2b2b;
   border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   overflow: hidden;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-}
-
-.masonry-item:hover {
-  transform: scale(1.03);
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-.masonry-content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  object-fit: cover;
+}
+
+.project-info {
   padding: 1rem;
   text-align: center;
 }
 
-.masonry-content img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  object-fit: cover;
-  margin-bottom: 1rem;
+.project-info h3 {
+  font-size: 1.5rem;
+  color: #e0e0e0;
+  margin-bottom: 0.5rem;
 }
 
-.masonry-content h3 {
-  font-size: 1.2rem;
-  color: #e0e0e0;
+.project-info p {
+  font-size: 1rem;
+  color: #c0c0c0;
   margin: 0.5rem 0;
 }
 
-.masonry-content p {
-  font-size: 0.9rem;
-  color: #c0c0c0;
-  margin-bottom: 1rem;
-}
-
-.project-link {
-  font-size: 1rem;
-  color: #ff7f50;
-  text-decoration: none;
-  border: 1px solid #ff7f50;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.project-link:hover {
-  background-color: #ff7f50;
-  color: #fff;
-}
-
-/* Modal Overlay */
+/* Modal Styles */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -92,52 +72,189 @@
   z-index: 1000;
 }
 
-/* Modal Content */
 .modal-content {
   position: relative;
   background: #222;
-  padding: 1rem;
+  padding: 2rem;
   border-radius: 10px;
-  max-width: 80%;
-  max-height: 80%;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.modal-content img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.modal-content h2 {
+  font-size: 2rem;
+  color: #ff7f50;
+  margin-bottom: 1rem;
+}
+
+.modal-content p {
+  font-size: 1rem;
+  color: #e0e0e0;
+  margin-bottom: 1.5rem;
+}
+
+/* Technologies as Buttons */
+.modal-tech {
+  margin-bottom: 1.5rem;
+}
+
+.modal-tech h4 {
+  font-size: 1.2rem;
+  color: #ff7f50;
+  margin-bottom: 0.5rem;
+}
+
+.tech-buttons {
   display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-button {
+  background: rgba(255, 127, 80, 0.2);
+  color: #ff7f50;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tech-button:hover {
+  background: #ff7f50;
+  color: #fff;
+}
+
+/* GitHub Button */
+.project-link {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: #ff7f50;
+  border: 2px solid #ff7f50;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.modal-image {
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 10px;
+.project-link i {
+  font-size: 1.2rem;
 }
 
+.project-link:hover {
+  background-color: #ff7f50;
+  color: #fff;
+}
+
+.project-link svg {
+  font-size: 1.2rem; /* Adjust the icon size */
+}
+
+/* Close Button */
 .close-button {
   position: absolute;
   top: 10px;
   right: 10px;
-  background: #ff7f50;
+  background: none;
   border: none;
-  color: white;
-  padding: 0.5rem;
-  border-radius: 5px;
+  color: #ff7f50;
+  font-size: 1.5rem;
   cursor: pointer;
-  font-size: 1rem;
+  transition: transform 0.2s ease, color 0.3s ease;
 }
 
 .close-button:hover {
-  background: #ff5722;
+  color: #ff5722;
+  transform: scale(1.2);
+}
+
+.close-button:focus {
+  outline: none;
+}
+
+/* Slick Carousel Customizations */
+.slick-dots li button:before {
+  color: #ff7f50;
+  font-size: 0.8rem;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ff5722;
+}
+
+/* Navigation Arrows */
+.slick-arrow {
+  border-radius: 5px;
+  width: 35px;
+  height: 35px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.slick-arrow:hover {
+  transform: scale(1.1);
+}
+
+.slick-arrow:before {
+  content: '';
+}
+
+.slick-prev:after,
+.slick-next:after {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: solid #ff7f50;
+  border-width: 0 2px 2px 0;
+}
+
+.slick-prev:after {
+  transform: rotate(135deg);
+}
+
+.slick-next:after {
+  transform: rotate(-45deg);
+}
+
+/* Positioning the Arrows */
+.slick-prev {
+  left: -45px;
+}
+
+.slick-next {
+  right: -45px;
 }
 
 /* Responsive Adjustments */
 @media screen and (max-width: 768px) {
-  .masonry-grid {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  .slick-arrow {
+    width: 30px;
+    height: 30px;
   }
-}
 
-@media screen and (max-width: 480px) {
-  .masonry-grid {
-    grid-template-columns: 1fr;
+  .slick-prev {
+    left: -30px;
+  }
+
+  .slick-next {
+    right: -30px;
   }
 }

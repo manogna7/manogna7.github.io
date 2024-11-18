@@ -106,7 +106,7 @@
 }
 
 .experience__skills span:hover {
-  background: var(--color-secondary);
+  background: rgba(165, 77, 37, 0.329); /* Adjusted color with transparency */
   color: var(--color-white);
 }
 

@@ -16,7 +16,7 @@
   --color-bg: #0d0d0d; /* Dark background for improved contrast */
   --color-bg-varient: #1f1f1f; /* Slightly lighter dark for variations */
   --color-primary: #a54d25; /* Main accent color, warm orange */
-  --color-secondary: #4da8a0; /* New secondary accent, teal for contrast */
+  --color-secondary: #ffffff; /* New secondary accent, teal for contrast */
   --color-white: #ffffff;
   --color-light: rgba(255, 255, 255, 0.8);
   --color-dark: #0d0d0d; /* Dark tone to match background */

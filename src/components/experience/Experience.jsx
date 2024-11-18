@@ -9,7 +9,7 @@ function Experience() {
   // Chronological job data from most recent to oldest
   const jobs = {
     flowai: {
-      title: 'Back-End Engineer Intern @ FlowAI.Tech',
+      title: 'Back-End Engineer Intern @ Flow',
       dates: 'Aug. 2024 – Present',
       description: [
         'Conducted codebase re-validation, identifying and resolving over 30 critical issues across multiple branches.',
@@ -27,7 +27,7 @@ function Experience() {
       skills: ['Drupal', 'WCAG', 'Content Management']
     },
     factset: {
-      title: 'Software Engineer I @ FactSet Research Systems Inc.',
+      title: 'Software Engineer I @ FactSet',
       dates: 'Nov. 2021 – Aug. 2022',
       description: [
         'Developed financial data solutions using .NET and Vue.js, enhancing portfolio analysis and attribution models.',
@@ -37,7 +37,7 @@ function Experience() {
       skills: ['.NET', 'Vue.js', 'Machine Learning', 'SQL']
     },
     feba: {
-      title: 'Full-Stack Developer @ Feba Technologies Pvt. Ltd.',
+      title: 'Full-Stack Developer @ FebaTech',
       dates: 'Jan. 2020 – Nov. 2021',
       description: [
         'Built a digital vault for WILL-related data with a JSON to PDF module, reducing retrieval time by 40%.',
@@ -55,7 +55,7 @@ function Experience() {
       skills: ['Machine Learning', 'Data Analysis', 'Python']
     },
     verzeo: {
-      title: 'Summer Intern @ Verzeo Edutech',
+      title: 'Summer Intern @ Verzeo',
       dates: 'May 2018 – Jun. 2018',
       description: [
         'Trained in Microsoft Azure tools and VMware; worked on a data auditing project for a banking organization using SharePoint Online.'

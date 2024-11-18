@@ -47,30 +47,22 @@ const About = () => {
 
           {/* About Text Section */}
           <p>
-            Hello there!
+            Bringing ideas to life — whether through code or brushstrokes — is
+            what truly makes me feel alive. I got into development because
+            computers have always fascinated me, and the magic they create by
+            transforming simple commands into incredible outcomes. Every bug I
+            come across and every skill I refine brings me closer to that sense
+            of wonder. I strive to bring creativity and technology together to
+            create something that will outlive me and leave a lasting impact.
             <br />
-            Turning imagination into reality through code or brushstrokes is
-            what makes me feel alive. I got into development because computers
-            have always fascinated me, and I am perpetually working on improving
-            my skills one bug at a time. Just seeing code getting converted to
-            things we regularly use, like a navigation or something as simple as
-            a cursor click, these are no less than magic to me. I'm all about
-            bringing creativity and tech together to create something that would
-            outlive me.
-            <br /> 
-            I have almost 3 years of experience in the field of software
-            development where I've had the opportunity to work with clients
-            worldwide, delivering innovative solutions and driving impactful
-            results. My roles have ranged from web development to research and
-            advisory, allowing me to hone my skills in both front-end and
-            back-end technologies. I've been part of projects that have
-            improved user engagement, boosted communication efficiency, and
-            streamlined processes. I thrive in dynamic environments and am
-            always seeking opportunities to learn and grow.
+            With almost three years of experience, I’ve had the privilege of
+            working with clients across the globe, delivering innovative
+            solutions and driving impactful results. I thrive in dynamic
+            environments, always eager to learn, grow, and tackle new
+            challenges head-on.
             <br />
-            Thank you for stopping by and do reach out to me if you have
-            something to talk about! :)
-            <br />
+            Thank you for stopping by! Feel free to reach out — I’d love to
+            connect and know about you. :)
           </p>
 
           <a href="#contact" className="btn btn-primary">
