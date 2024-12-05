@@ -13,7 +13,7 @@ const projects = [
       "Built DevEase, a web development automation tool designed to simplify code and app generation using AI.",
     technologies: ["JavaScript", "Node.js", "React", "Express", "AI"],
     link: "https://github.com/devease",
-    image: require("./7.png"),
+    image: require("./devease.png"),
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const projects = [
       "Contributed to an open-source platform for running large language models locally with advanced optimization techniques.",
     technologies: ["Python", "AI Optimization", "Batch Processing"],
     link: "https://github.com/llm-vm",
-    image: require("./7.png"),
+    image: require("./llm-vm.png"),
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ const projects = [
       "Implemented RL algorithms for environments like Atari games and HalfCheetah to showcase advanced AI techniques.",
     technologies: ["Python", "Reinforcement Learning", "OpenAI Gym"],
     link: "https://github.com/decision-making",
-    image: require("./7.png"),
+    image: require("./1.png"),
   },
   {
     id: 4,
