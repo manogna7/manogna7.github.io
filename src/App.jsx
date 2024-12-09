@@ -17,7 +17,7 @@ export const App = () => {
       <About />
       <Experience />
       <Projects />
-      //<StudentActivities />
+      {/* <StudentActivities /> */}
       <Testimonials />
       <Contact />
       <Footer />

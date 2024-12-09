@@ -1,102 +1,71 @@
-import React, { useEffect, useRef, useState } from "react";
-import "./header.css"; // Import the updated CSS file
+import React, { useState, useEffect } from "react";
+import "./header.css";
+import CTA from "./CTA";
+import HeaderSocial from "./HeaderSocial";
 
 const Header = () => {
-  const [isBlinking, setIsBlinking] = useState(true); // State for blinking or mouse movement
-  const catRef = useRef(null);
+  const [mouseX, setMouseX] = useState(0);
+  const [mouseY, setMouseY] = useState(0);
+
+  // Mouse tracking for pupil movement
+  const handleMouseMove = (event) => {
+    setMouseX(event.clientX / window.innerWidth - 0.5);
+    setMouseY(event.clientY / window.innerHeight - 0.5);
+  };
 
   useEffect(() => {
-    const catFace = catRef.current.querySelector(".cat-face");
-
-    const handleMouseEnter = () => {
-      setIsBlinking(true); // Enable blinking when mouse enters
-    };
-
-    const handleMouseLeave = () => {
-      setIsBlinking(false); // Enable mouse tracking when mouse leaves
-    };
-
-    catFace.addEventListener("mouseenter", handleMouseEnter);
-    catFace.addEventListener("mouseleave", handleMouseLeave);
-
-    // Cleanup event listeners
-    return () => {
-      catFace.removeEventListener("mouseenter", handleMouseEnter);
-      catFace.removeEventListener("mouseleave", handleMouseLeave);
-    };
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
-
-  // Pupil movement based on cursor position (only if not blinking)
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      if (!isBlinking) {
-        const eyes = document.querySelectorAll(".pupil");
-        const rect = catRef.current.getBoundingClientRect();
-        const mouseX = e.clientX - rect.left;
-        const mouseY = e.clientY - rect.top;
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-
-        const maxOffsetX = 8;
-        const maxOffsetY = 8;
-
-        const offsetX = Math.min(Math.max((mouseX - centerX) / 15, -maxOffsetX), maxOffsetX);
-        const offsetY = Math.min(Math.max((mouseY - centerY) / 15, -maxOffsetY), maxOffsetY);
-
-        eyes.forEach((pupil) => {
-          pupil.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
-        });
-      }
-    };
-
-    if (!isBlinking) {
-      window.addEventListener("mousemove", handleMouseMove);
-    } else {
-      window.removeEventListener("mousemove", handleMouseMove);
-    }
-
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, [isBlinking]);
 
   return (
     <header>
-      <div className="header__container" ref={catRef}>
-        {/* Title */}
-        <h1>Hi, I'm Manogna</h1>
-        <h2>Creative Developer | Tech Enthusiast</h2>
+      <div className="container header__container">
+      <h1>Hi, I'm Manogna</h1>
+        <h4 className="text-list">
+          Currently pursuing my Master's in Computer Science at Oregon State University
+        </h4>
+        <CTA /> {/* Includes Download Resume and Bento Buttons */}
+        <HeaderSocial /> {/* Social icons: LinkedIn, GitHub, etc. */}
         <p>Exploring the universe, one line of code at a time.</p>
 
-        {/* Cat Animation */}
+        {/* Space Helmet */}
         <div className="space-helmet">
           <div className="helmet-border"></div>
           <div className="cat-face">
-            {/* Ears */}
             <div className="ear left-ear"></div>
             <div className="ear right-ear"></div>
-            {/* Eyes */}
             <div className="eye left-eye">
-              <div className={`pupil ${isBlinking ? "blinking" : ""}`}></div>
+              <div
+                className="pupil"
+                style={{
+                  transform: `translate(-50%, -50%) translate(${mouseX * 10}px, ${
+                    mouseY * 10
+                  }px)`,
+                }}
+              ></div>
             </div>
             <div className="eye right-eye">
-              <div className={`pupil ${isBlinking ? "blinking" : ""}`}></div>
+              <div
+                className="pupil"
+                style={{
+                  transform: `translate(-50%, -50%) translate(${mouseX * 10}px, ${
+                    mouseY * 10
+                  }px)`,
+                }}
+              ></div>
             </div>
-            {/* Nose */}
             <div className="nose"></div>
-            {/* Mouth */}
             <div className="mouth"></div>
-            {/* Whiskers */}
             <div className="whiskers left-whiskers"></div>
             <div className="whiskers right-whiskers"></div>
           </div>
-          {/* Body and Tail */}
           <div className="cat-body"></div>
           <div className="tail"></div>
         </div>
 
-        {/* Scroll Down */}
-        <a href="#about" className="scroll__down">
+        {/* Scroll Down Animation */}
+        <a href="#contact" className="scroll__down">
           Scroll Down
         </a>
       </div>
