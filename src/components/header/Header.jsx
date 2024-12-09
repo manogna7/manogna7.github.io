@@ -61,7 +61,7 @@ const Header = () => {
             <div className="whiskers right-whiskers"></div>
           </div>
           <div className="cat-body"></div>
-          <div className="tail"></div>
+          {/* <div className="tail"></div> */}
         </div>
 
         {/* Scroll Down Animation */}
