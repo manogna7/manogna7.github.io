@@ -14,12 +14,18 @@
   --color-secondary: #ffffff;
   --color-dark: #0d0d0d;
   --color-light: #f3f3f3;
-  --color-pink: #a54d25;
+  --color-pink: #ff6f91;
   --color-inner-ear: #ffb74d;
 
   --transition: all 0.3s ease-in-out;
 }
+header,
+.space-helmet,
+.cat-face {
+  overflow: visible !important; /* Allow ears to render outside */
+}
 
+/* Font Styling */
 body {
   font-family: 'Montserrat', sans-serif;
   background: var(--color-bg);
@@ -46,14 +52,22 @@ header {
   text-align: center;
 }
 
+.cta {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
 .header__socials {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.8rem;
   position: absolute;
-  left: 0;
-  bottom: 4rem;
+  left: 1.5rem;
+  bottom: 3rem;
   font-size: 1.5rem;
 }
 
@@ -67,14 +81,13 @@ header {
 /* ===== SCROLL DOWN ===== */
 .scroll__down {
   position: absolute;
-  right: -2.3rem;
-  bottom: 5rem;
+  right: 2rem; /* Offset from edge for better balance */
+  bottom: 2.5rem;
   transform: rotate(90deg);
   font-weight: 500;
   font-size: 1rem;
 }
 
-/* Text Animations */
 h1, h2, p {
   color: var(--color-primary);
   margin: 0.5rem 0;
@@ -82,8 +95,8 @@ h1, h2, p {
 }
 
 h1 {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
+  font-size: 3.5rem; /* Slightly larger */
+  margin-bottom: 1rem; /* Add space below */
   animation-delay: 0.2s;
 }
 
@@ -95,7 +108,7 @@ h2 {
 
 p {
   font-size: 1.2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem; /* Increased spacing */
   animation-delay: 0.6s;
 }
 
@@ -109,13 +122,9 @@ p {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(77, 169, 255, 0.352), transparent);
+  background: radial-gradient(circle, rgba(255, 145, 77, 0.352), transparent);
   animation: bobbing 3s ease-in-out infinite;
-  filter: blur(0.9px) brightness(1.2); /* Glow effect */
-
-    border: 0.5px solid rgba(255, 255, 255, 0.7); /* Helmet outline */
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Glow effect */
-  
+  overflow: visible; /* Allow the ears to extend beyond this container */
 }
 
 @keyframes bobbing {
@@ -131,108 +140,46 @@ p {
 .cat-face {
   width: 200px;
   height: 200px;
-  background: linear-gradient(135deg, #ff914d, #a54d25);
+  background: conic-gradient(#ffb74d, #ff914d);
   clip-path: polygon(50% 0%, 85% 15%, 100% 50%, 85% 85%, 50% 100%, 15% 85%, 0% 50%, 15% 15%);
-
   position: relative;
   z-index: 2;
-  animation: headTilt 7s infinite;
-}
-
-
-.smile {
-  position: absolute;
-  bottom: 30px; /* Positioned relative to the face */
-  width: 45px; /* Adjusted size */
-  height: 25px;
-  display: flex;
-  margin: 0 auto;
-  animation: smileStretch 3s infinite ease-in-out; /* Adds a subtle dynamic effect */
-}
-
-.smile-svg {
-  width: 100%;
-  height: 100%;
-  stroke: black;
-  stroke-width: 5;
-  fill: transparent;
-  animation: smileBounce 2s infinite; /* Adds playful bounce */
-}
-
-/* Smile Animation */
-@keyframes smileStretch {
-  0%, 100% {
-    transform: scaleX(1);
-  }
-  50% {
-    transform: scaleX(1.2); /* Stretch horizontally */
-  }
-}
-
-@keyframes smileBounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-2px);
-  }
-}
-
-
-@keyframes headTilt {
-  0%, 100% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(5deg);
-  }
 }
 
 /* Ears */
 .ear {
   position: absolute;
-  width: 100px;
+  width: 100px; /* Increased size for prominence */
   height: 100px;
-  background: linear-gradient(135deg, #ff914d, #a54d25);
+  background: var(--color-primary);
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  border-radius: 5px;
-  z-index: 1;
+  border-radius: 5px; /* Rounded edges */
+  z-index: 1; /* Below the face */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  animation: earTwitch 6s infinite;
 }
 
 .left-ear {
-  top: -60px;
-  left: -40px;
+  top: -60px; /* Higher placement */
+  left: -40px; /* Moved further outward */
   transform: rotate(-15deg);
 }
 
 .right-ear {
   top: -60px;
-  right: -40px;
+  right: -40px; /* Moved further outward */
   transform: rotate(15deg);
 }
 
-.left-ear::after,
-.right-ear::after {
+.ear::after {
   content: '';
   position: absolute;
   width: 60px;
   height: 60px;
   background: var(--color-inner-ear);
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  transform: translate(-50%, -50%);
-  z-index: 2;
-}
-
-
-@keyframes earTwitch {
-  0%, 100% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(5deg);
-  }
+  top: 20px;
+  left: 20px;
+  border-radius: 3px;
 }
 
 /* Eyes */
@@ -243,7 +190,6 @@ p {
   background: radial-gradient(circle, #ffffff 80%, #f3f3f3 100%);
   border-radius: 50%;
   overflow: hidden;
-  animation: blink 5s infinite;
 }
 
 .left-eye {
@@ -256,15 +202,6 @@ p {
   right: 40px;
 }
 
-@keyframes blink {
-  0%, 90%, 100% {
-    height: 40px;
-  }
-  95% {
-    height: 5px;
-  }
-}
-
 .pupil {
   position: absolute;
   width: 30px;
@@ -274,6 +211,8 @@ p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  animation: blink 5s infinite;
+
 }
 
 .pupil::after {
@@ -299,6 +238,37 @@ p {
   transform: translateX(-50%);
 }
 
+.smile {
+  position: absolute;
+  top: 150px; /* Adjusted for alignment */
+  left: 50%;
+  transform: translateX(-50%);
+  
+  width: 50px;
+  height: 25px; /* Controls the smile's height */
+}
+
+
+/* Whiskers */
+.whiskers {
+  position: absolute;
+  width: 80px;
+  height: 1px;
+  background: #000;
+}
+
+.left-whiskers {
+  top: 125px;
+  left: -50px;
+  transform: rotate(-20deg) translateY(2px);
+}
+
+.right-whiskers {
+  top: 125px;
+  right: -50px;
+  transform: rotate(20deg) translateY(2px);
+}
+
 /* Tail */
 .tail {
   position: absolute;
@@ -309,23 +279,23 @@ p {
   bottom: -20px;
   right: -30px;
   transform-origin: top;
-  animation: dynamicWag 3s ease-in-out infinite;
+  animation: wagging 2s ease-in-out infinite;
 }
 
-@keyframes dynamicWag {
-  0% {
-    transform: rotate(15deg);
-  }
-  25% {
-    transform: rotate(-10deg);
+@keyframes wagging {
+  0%, 100% {
+    transform: rotate(10deg);
   }
   50% {
-    transform: rotate(20deg);
+    transform: rotate(-10deg);
   }
-  75% {
-    transform: rotate(-5deg);
+}
+
+@keyframes blink {
+  0%, 90%, 100% {
+    height: 30px;
   }
-  100% {
-    transform: rotate(15deg);
+  95% {
+    height: 5px;
   }
 }

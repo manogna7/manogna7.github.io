@@ -21,13 +21,13 @@ const Header = () => {
   return (
     <header>
       <div className="container header__container">
-      <h1>Hi, I'm Manogna</h1>
-        <h4 className="text-list">
+        <h1>Hi, I'm Manogna</h1>
+        <p className="text-list">
           Currently pursuing my Master's in Computer Science at Oregon State University
-        </h4>
+        </p>
         <CTA /> {/* Includes Download Resume and Bento Buttons */}
         <HeaderSocial /> {/* Social icons: LinkedIn, GitHub, etc. */}
-        <p>Exploring the universe, one line of code at a time.</p>
+        <h3>Exploring the universe, one line of code at a time.</h3>
 
         {/* Space Helmet */}
         <div className="space-helmet">
@@ -39,9 +39,8 @@ const Header = () => {
               <div
                 className="pupil"
                 style={{
-                  transform: `translate(-50%, -50%) translate(${mouseX * 10}px, ${
-                    mouseY * 10
-                  }px)`,
+                  transform: `translate(-50%, -50%) translate(${mouseX * 10}px, ${mouseY * 10
+                    }px)`,
                 }}
               ></div>
             </div>
@@ -49,19 +48,36 @@ const Header = () => {
               <div
                 className="pupil"
                 style={{
-                  transform: `translate(-50%, -50%) translate(${mouseX * 10}px, ${
-                    mouseY * 10
-                  }px)`,
+                  transform: `translate(-50%, -50%) translate(${mouseX * 10}px, ${mouseY * 10
+                    }px)`,
                 }}
               ></div>
             </div>
             <div className="nose"></div>
+            <div className="smile">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 100 50"
+                width="40"
+                height="25"
+                className="smile-svg"
+              >
+                <path
+                  d="M10 10 Q50 50, 90 10"
+                  stroke="black"
+                  fill="transparent"
+                  strokeWidth="5"
+                />
+              </svg>
+            </div>
+
             <div className="mouth"></div>
             <div className="whiskers left-whiskers"></div>
             <div className="whiskers right-whiskers"></div>
           </div>
           <div className="cat-body"></div>
-          {/* <div className="tail"></div> */}
+          <div className="tail"></div>
+
         </div>
 
         {/* Scroll Down Animation */}
