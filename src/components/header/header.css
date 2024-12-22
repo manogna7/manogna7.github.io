@@ -16,7 +16,6 @@
   --color-light: #f3f3f3;
   --color-pink: #a54d25;
   --color-inner-ear: #ffb74d;
-
   --transition: all 0.3s ease-in-out;
 }
 
@@ -44,8 +43,32 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 2rem;
+  gap: 1rem; /* Consistent spacing */
 }
 
+.header__description {
+  font-size: 1.2rem;
+  color: var(--color-light);
+  margin-bottom: 1rem;
+}
+
+.header__tagline {
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--color-secondary);
+  margin-top: 1rem;
+}
+
+/* ===== CTA ===== */
+.cta {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+/* ===== SOCIALS ===== */
 .header__socials {
   display: flex;
   flex-direction: column;
@@ -75,7 +98,9 @@ header {
 }
 
 /* Text Animations */
-h1, h2, p {
+h1,
+h2,
+p {
   color: var(--color-primary);
   margin: 0.5rem 0;
   animation: fadeIn 2s ease-in-out forwards;
@@ -109,19 +134,24 @@ p {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(77, 169, 255, 0.352), transparent);
+  background: radial-gradient(circle, rgba(77, 169, 255, 0.219), transparent);
   animation: bobbing 3s ease-in-out infinite;
-  filter: blur(0.9px) brightness(1.2); /* Glow effect */
+  filter: blur(0.9px) brightness(1.2);
+  /* Glow effect */
 
-    border: 0.5px solid rgba(255, 255, 255, 0.7); /* Helmet outline */
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Glow effect */
-  
+  /* Helmet outline */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.182);
+  /* Glow effect */
+
 }
 
 @keyframes bobbing {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(-3px);
   }
+
   50% {
     transform: translateY(3px);
   }
@@ -131,58 +161,43 @@ p {
 .cat-face {
   width: 200px;
   height: 200px;
-  background: linear-gradient(135deg, #ff914d, #a54d25);
+  background: conic-gradient(#c76e2a, #a54d25);
   clip-path: polygon(50% 0%, 85% 15%, 100% 50%, 85% 85%, 50% 100%, 15% 85%, 0% 50%, 15% 15%);
-
   position: relative;
   z-index: 2;
   animation: headTilt 7s infinite;
 }
 
-
-.smile {
-  position: absolute;
-  bottom: 30px; /* Positioned relative to the face */
-  width: 45px; /* Adjusted size */
-  height: 25px;
-  display: flex;
-  margin: 0 auto;
-  animation: smileStretch 3s infinite ease-in-out; /* Adds a subtle dynamic effect */
+.cat-container svg {
+  width: 300px;
+  height: 300px;
 }
 
-.smile-svg {
-  width: 100%;
-  height: 100%;
-  stroke: black;
-  stroke-width: 5;
-  fill: transparent;
-  animation: smileBounce 2s infinite; /* Adds playful bounce */
+.cat-container svg circle {
+  transition: fill 0.3s ease;
 }
 
-/* Smile Animation */
-@keyframes smileStretch {
-  0%, 100% {
-    transform: scaleX(1);
-  }
-  50% {
-    transform: scaleX(1.2); /* Stretch horizontally */
-  }
+.cat-container svg circle:hover {
+  fill: #FF5722;
 }
 
-@keyframes smileBounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-2px);
-  }
+.cat-image {
+  width: 300px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.cat-image:hover {
+  transform: scale(1.1) rotate(5deg);
 }
 
 
 @keyframes headTilt {
-  0%, 100% {
+  0%,
+  100% {
     transform: rotate(0deg);
   }
+
   50% {
     transform: rotate(5deg);
   }
@@ -191,26 +206,25 @@ p {
 /* Ears */
 .ear {
   position: absolute;
-  width: 100px;
-  height: 100px;
-  background: linear-gradient(135deg, #ff914d, #a54d25);
+  width: 80px;
+  height: 80px;
+  background: conic-gradient( #ff914d, #a54d25);
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   border-radius: 5px;
   z-index: 1;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  animation: earTwitch 6s infinite;
 }
 
 .left-ear {
-  top: -60px;
-  left: -40px;
-  transform: rotate(-15deg);
+  top: 25px;
+  left: 60px;
+  transform: rotate(-20deg);
 }
 
 .right-ear {
-  top: -60px;
-  right: -40px;
-  transform: rotate(15deg);
+  top: 29px;
+  right: 50px;
+  transform: rotate(30deg);
 }
 
 .left-ear::after,
@@ -223,16 +237,6 @@ p {
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   transform: translate(-50%, -50%);
   z-index: 2;
-}
-
-
-@keyframes earTwitch {
-  0%, 100% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(5deg);
-  }
 }
 
 /* Eyes */
@@ -257,7 +261,9 @@ p {
 }
 
 @keyframes blink {
-  0%, 90%, 100% {
+  0%,
+  90%,
+  100% {
     height: 40px;
   }
   95% {
@@ -267,13 +273,14 @@ p {
 
 .pupil {
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   background: #000;
   border-radius: 50%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  clip-path: ellipse(45% 50%);
 }
 
 .pupil::after {
@@ -290,14 +297,39 @@ p {
 /* Nose */
 .nose {
   position: absolute;
-  width: 12px;
-  height: 12px;
-  background: #000;
-  border-radius: 50%;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 8px solid #000;
   top: 120px;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+}
+
+.mouth {
+  position: absolute;
+  top: 125px;
   left: 50%;
   transform: translateX(-50%);
 }
+/* Forehead Stripes */
+.stripes {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.stripe {
+  width: 40px;
+  height: 20px;
+  background: #a54d25; /* Darker shade for stripes */
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
 
 /* Tail */
 .tail {
@@ -316,15 +348,19 @@ p {
   0% {
     transform: rotate(15deg);
   }
+
   25% {
     transform: rotate(-10deg);
   }
+
   50% {
     transform: rotate(20deg);
   }
+
   75% {
     transform: rotate(-5deg);
   }
+
   100% {
     transform: rotate(15deg);
   }
