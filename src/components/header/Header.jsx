@@ -1,9 +1,24 @@
 import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./header.css";
 import CTA from "./CTA";
 import HeaderSocial from "./HeaderSocial";
 
 const Header = () => {
+  const [mouseX, setMouseX] = useState(0);
+  const [mouseY, setMouseY] = useState(0);
+
+  // Mouse tracking for pupil movement
+  const handleMouseMove = (event) => {
+    setMouseX(event.clientX / window.innerWidth - 0.5);
+    setMouseY(event.clientY / window.innerHeight - 0.5);
+  };
+
+  useEffect(() => {
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
   const [mouseX, setMouseX] = useState(0);
   const [mouseY, setMouseY] = useState(0);
 
@@ -72,6 +87,7 @@ const Header = () => {
           </div>
         </div>
 
+        {/* Scroll Down Animation */}
         {/* Scroll Down Animation */}
         <a href="#contact" className="scroll__down">
           Scroll Down

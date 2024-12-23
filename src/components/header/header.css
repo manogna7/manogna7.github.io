@@ -68,7 +68,6 @@ header {
   justify-content: center;
 }
 
-/* ===== SOCIALS ===== */
 .header__socials {
   display: flex;
   flex-direction: column;
