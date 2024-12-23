@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.3d828a5a.css",
-    "main.js": "/static/js/main.786a38dc.js",
+    "main.css": "/static/css/main.5490867d.css",
+    "main.js": "/static/js/main.c2adf940.js",
     "static/media/devease.png": "/static/media/devease.0e8d7eb6eaae48ca313f.png",
     "static/media/llm-vm.png": "/static/media/llm-vm.9d6632915ed6484d36aa.png",
     "static/media/5.png": "/static/media/5.202eb3ed3d9f0677fe68.png",
     "static/media/profile.jpg": "/static/media/profile.f549a8505b4cf506a8ea.jpg",
     "static/media/7.png": "/static/media/7.5913840d9335a477e7a4.png",
-    "static/media/manogna.pdf": "/static/media/manogna.a1f02c3e99db33347703.pdf",
+    "static/media/manogna.pdf": "/static/media/manogna.edfab064035fca0f2b79.pdf",
     "static/media/1.png": "/static/media/1.d9f1c2b516c6eed2055e.png",
     "static/media/img2.png": "/static/media/img2.62ac1793b4f2676ea9e3.png",
     "static/media/img1.jpg": "/static/media/img1.52ba2f10c63ea63b5adf.jpg",
@@ -16,11 +16,11 @@
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.3d828a5a.css.map": "/static/css/main.3d828a5a.css.map",
-    "main.786a38dc.js.map": "/static/js/main.786a38dc.js.map"
+    "main.5490867d.css.map": "/static/css/main.5490867d.css.map",
+    "main.c2adf940.js.map": "/static/js/main.c2adf940.js.map"
   },
   "entrypoints": [
-    "static/css/main.3d828a5a.css",
-    "static/js/main.786a38dc.js"
+    "static/css/main.5490867d.css",
+    "static/js/main.c2adf940.js"
   ]
 }
