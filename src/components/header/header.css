@@ -15,7 +15,7 @@
   --color-dark: #0d0d0d;
   --color-light: #f3f3f3;
   --color-pink: #a54d25;
-  --color-inner-ear: #ffb74d;
+  --color-inner-ear: #a75252;
   --transition: all 0.3s ease-in-out;
 }
 
@@ -44,13 +44,15 @@ header {
   align-items: center;
   text-align: center;
   padding: 2rem;
-  gap: 1rem; /* Consistent spacing */
+  gap: 1rem;
 }
 
 .header__description {
   font-size: 1.2rem;
-  color: var(--color-light);
+  color: var(--color-light); 
   margin-bottom: 1rem;
+  white-space: pre-line;
+  overflow: hidden; 
 }
 
 .header__tagline {
@@ -60,7 +62,7 @@ header {
   margin-top: 1rem;
 }
 
-/* ===== CTA ===== */
+/* CTA */
 .cta {
   margin-top: 0.5rem;
   display: flex;
@@ -68,7 +70,7 @@ header {
   justify-content: center;
 }
 
-/* ===== SOCIALS ===== */
+/* Socials */
 .header__socials {
   display: flex;
   flex-direction: column;
@@ -87,14 +89,32 @@ header {
   background: var(--color-primary);
 }
 
-/* ===== SCROLL DOWN ===== */
 .scroll__down {
   position: absolute;
   right: -2.3rem;
   bottom: 5rem;
-  transform: rotate(90deg);
-  font-weight: 500;
   font-size: 1rem;
+  color: var(--color-secondary);
+  display: block;
+  animation: fadeIn 2s ease-in-out, bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0) rotate(90deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(90deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Text Animations */
@@ -103,13 +123,22 @@ h2,
 p {
   color: var(--color-primary);
   margin: 0.5rem 0;
-  animation: fadeIn 2s ease-in-out forwards;
+  animation: fadeIn 0.5s ease-in-out forwards;
 }
 
 h1 {
   font-size: 3.5rem;
-  margin-bottom: 1rem;
-  animation-delay: 0.2s;
+  color: var(--color-primary);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.hero-heading {
+  font-size: 3rem;
+  color: var(--color-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  animation: fadeIn 2s ease-in-out forwards;
 }
 
 h2 {
@@ -137,21 +166,13 @@ p {
   background: radial-gradient(circle, rgba(77, 169, 255, 0.219), transparent);
   animation: bobbing 3s ease-in-out infinite;
   filter: blur(0.9px) brightness(1.2);
-  /* Glow effect */
-
-  /* Helmet outline */
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.182);
-  /* Glow effect */
-
 }
 
 @keyframes bobbing {
-
-  0%,
-  100% {
+  0%, 100% {
     transform: translateY(-3px);
   }
-
   50% {
     transform: translateY(3px);
   }
@@ -191,13 +212,10 @@ p {
   transform: scale(1.1) rotate(5deg);
 }
 
-
 @keyframes headTilt {
-  0%,
-  100% {
+  0%, 100% {
     transform: rotate(0deg);
   }
-
   50% {
     transform: rotate(5deg);
   }
@@ -208,7 +226,7 @@ p {
   position: absolute;
   width: 80px;
   height: 80px;
-  background: conic-gradient( #ff914d, #a54d25);
+  background: conic-gradient(#ff914d, #a54d25);
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   border-radius: 5px;
   z-index: 1;
@@ -261,9 +279,7 @@ p {
 }
 
 @keyframes blink {
-  0%,
-  90%,
-  100% {
+  0%, 90%, 100% {
     height: 40px;
   }
   95% {
@@ -313,6 +329,7 @@ p {
   left: 50%;
   transform: translateX(-50%);
 }
+
 /* Forehead Stripes */
 .stripes {
   position: absolute;
@@ -326,10 +343,9 @@ p {
 .stripe {
   width: 40px;
   height: 20px;
-  background: #a54d25; /* Darker shade for stripes */
+  background: #a54d25;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
-
 
 /* Tail */
 .tail {
@@ -348,19 +364,15 @@ p {
   0% {
     transform: rotate(15deg);
   }
-
   25% {
     transform: rotate(-10deg);
   }
-
   50% {
     transform: rotate(20deg);
   }
-
   75% {
     transform: rotate(-5deg);
   }
-
   100% {
     transform: rotate(15deg);
   }

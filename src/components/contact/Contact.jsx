@@ -1,37 +1,33 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./contact.css";
-import { useRef } from "react";
 import emailjs from "emailjs-com";
 
 const Contact = () => {
   const form = useRef();
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
-
-    emailjs
-      .sendForm(
-        "service_5mth1dw",
-        "template_qjv2bn9",
+    console.log("Attempting to send email...");
+    try {
+      const result = await emailjs.sendForm(
+        "service_jslskjw", 
+        "template_qjv2bn9", 
         form.current,
-        "Q5sM5jvu2Im5Wa1qW"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
+        "A1M3P8LtErRjcWk8X" 
       );
+      console.log("Email sent successfully:", result.text);
 
-    e.target.reset();
+      if (form.current) {
+        form.current.reset();
+      }
+    } catch (error) {
+      console.error("Failed to send email:", error.text);
+    }
   };
+
   return (
     <section id="contact">
-      <h5>Get In Touch</h5>
       <h2>Contact Me</h2>
-
       <div className="container contact__container">
         <form ref={form} onSubmit={sendEmail}>
           <input

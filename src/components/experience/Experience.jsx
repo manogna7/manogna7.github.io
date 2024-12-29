@@ -15,26 +15,27 @@ function Experience() {
         'Conducted codebase re-validation, identifying and resolving over 30 critical issues across multiple branches.',
         'Integrated over 15 APIs, improving data retrieval speed by 40%.'
       ],
-      skills: ['Python', 'API Integration', 'Data Optimization']
+      skills: ['Django', 'API Integration', 'PostgreSQL']
     },
     osu: {
       title: 'Web Content Assistant – Extension Service @ Oregon State University',
       dates: 'Sep. 2023 – Present',
       description: [
         'Rebuilt and migrated the codebase from Drupal 8 to 10, enhancing functionality with custom modules and hooks.',
-        'Streamlined content workflows and prioritized metadata management, ensuring compliance with WCAG accessibility standards.'
+        'Streamlined content workflows and prioritized metadata management, ensuring compliance with WCAG accessibility standards.',
+        'Led web content optimization efforts including formatting checks, error correction, and broken link resolution using Monsido, resulting in a 20% increase in user engagement.'
       ],
-      skills: ['Drupal', 'WCAG', 'Content Management']
+      skills: ['Drupal', 'WCAG', 'Docker', 'PHP', 'ddev']
     },
     factset: {
       title: 'Software Engineer I @ FactSet',
       dates: 'Nov. 2021 – Aug. 2022',
       description: [
         'Developed financial data solutions using .NET and Vue.js, enhancing portfolio analysis and attribution models.',
-        'Integrated machine learning models into financial applications to improve predictive analytics capabilities.',
-        'Implemented notification systems, boosting responsiveness to critical updates by 20%.'
+        'Implemented notification systems, boosting responsiveness to critical updates by 20%.',
+        'Collaboratively reduced launch time by 50\% through code release automation, demonstrating proficiency in agile methodologies.'
       ],
-      skills: ['.NET', 'Vue.js', 'Machine Learning', 'SQL']
+      skills: ['.NET', 'Vue.js', 'TDD', 'JUnit', 'SonarQube', 'Swagger']
     },
     feba: {
       title: 'Full-Stack Developer @ FebaTech',
@@ -43,7 +44,7 @@ function Experience() {
         'Built a digital vault for WILL-related data with a JSON to PDF module, reducing retrieval time by 40%.',
         'Led training programs for 3 interns, helping them transition to full-time junior developers.'
       ],
-      skills: ['JavaScript', 'Node.js', 'MongoDB']
+      skills: ['SpringBoot', 'MongoDB', 'React', 'AWS', 'Jest']
     },
     kaashiv: {
       title: 'Summer Intern @ KaaShiv InfoTech',
@@ -77,7 +78,6 @@ function Experience() {
 
   return (
     <section id="experience">
-      <h5>Where I've Worked</h5>
       <h2>Experience</h2>
       <div className="experience__container">
         {/* Sidebar with Tabs */}

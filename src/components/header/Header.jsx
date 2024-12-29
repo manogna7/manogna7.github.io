@@ -4,9 +4,19 @@ import CTA from "./CTA";
 import HeaderSocial from "./HeaderSocial";
 
 const Header = () => {
-  const [mouseY, setMouseY] = useState(0);
+  // For typing animation
+  const headerText = "Hi, I’m Manogna";
+  const descriptionText =
+    "Software Engineer | Intern @ FlowAI | Expertise in Web Dev, Cloud Tech and AI";
 
-  // Mouse tracking for pupil movement
+  const [headerIndex, setHeaderIndex] = useState(0);
+  const [descriptionIndex, setDescriptionIndex] = useState(0);
+  const [headerTypedText, setHeaderTypedText] = useState("");
+  const [descriptionTypedText, setDescriptionTypedText] = useState("");
+
+  const [mouseY, setMouseY] = useState(0);
+  const [mouseX, setMouseX] = useState(0);
+
   const handleMouseMove = (event) => {
     setMouseX(event.clientX / window.innerWidth - 0.5);
     setMouseY(event.clientY / window.innerHeight - 0.5);
@@ -17,17 +27,46 @@ const Header = () => {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
-  const [mouseX, setMouseX] = useState(0);
+  // Typing animation for header
+  useEffect(() => {
+    if (headerIndex < headerText.length) {
+      const timeout = setTimeout(() => {
+        setHeaderTypedText((prev) => prev + headerText[headerIndex]);
+        setHeaderIndex((prev) => prev + 1);
+      }, 100); // Adjust typing speed here
+      return () => clearTimeout(timeout);
+    }
+  }, [headerIndex]);
+
+  // Typing animation for description
+  useEffect(() => {
+    if (headerIndex === headerText.length && descriptionIndex < descriptionText.length) {
+      const timeout = setTimeout(() => {
+        setDescriptionTypedText((prev) => prev + descriptionText[descriptionIndex]);
+        setDescriptionIndex((prev) => prev + 1);
+      }, 50); // Adjust typing speed here
+      return () => clearTimeout(timeout);
+    }
+  }, [descriptionIndex, headerIndex]);
 
   return (
     <header>
       <div className="container header__container">
-        <h1>Hi, I'm Manogna</h1>
+        {/* Typing Animation for Header */}
+        <h1 className="hero-heading">
+          {headerTypedText}
+          <span className="cursor">{headerIndex < headerText.length ? "|" : ""}</span> 
+        </h1>
+
+        {/* Typing Animation for Description */}
         <p className="header__description">
-          Currently pursuing my Master's in Computer Science at Oregon State University
+          {descriptionTypedText}
+          <span className="cursor">{descriptionIndex < descriptionText.length ? "|" : ""}</span>
         </p>
+
         <CTA />
         <HeaderSocial />
+
         <h3 className="header__tagline">Exploring the universe, one line of code at a time.</h3>
 
         {/* Space Helmet */}
@@ -77,6 +116,7 @@ const Header = () => {
         <a href="#contact" className="scroll__down">
           Scroll Down
         </a>
+        
       </div>
     </header>
   );
