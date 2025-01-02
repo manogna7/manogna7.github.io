@@ -2,7 +2,7 @@
 
 **Website Link:** [manogna7.github.io](https://manogna7.github.io/)
 
-This personal portfolio website is crafted using [Create React App](https://github.com/facebook/create-react-app), providing a dynamic and engaging showcase of skills and projects. Feel free to explore and get to know me better!
+This personal portfolio website is built using React to showcase of skills and projects. Feel free to explore and get to know me better!
 
 ## Project Structure
 
