@@ -1,5 +1,4 @@
 import React from "react";
-import manogna from "../../assets/manogna.pdf";
 
 const CTA = () => {
   return (
