@@ -9,10 +9,11 @@ function Experience() {
   // Chronological job data from most recent to oldest
   const jobs = {
     flowai: {
-      title: 'Back-End Engineer Intern @ Flow',
-      dates: 'Aug. 2024 – Present',
+      title: 'Software Engineer Intern @ Flow',
+      dates: 'Aug. 2024 – Jan. 2025',
       description: [
         'Conducted codebase re-validation, identifying and resolving over 30 critical issues across multiple branches.',
+        'Developed a microservice processing 1M+ daily data points (Python, AWS Lambda), reducing lead identification latency by 40%.',
         'Integrated over 15 APIs, improving data retrieval speed by 40%.'
       ],
       skills: ['Django', 'API Integration', 'PostgreSQL']
@@ -21,9 +22,10 @@ function Experience() {
       title: 'Web Content Assistant – Extension Service @ Oregon State University',
       dates: 'Sep. 2023 – Present',
       description: [
-        'Rebuilt and migrated the codebase from Drupal 8 to 10, enhancing functionality with custom modules and hooks.',
+        'Rebuilt, migrated the codebase from Drupal 8 to 10, and designing 20+ reusable PHP components, accelerating content creation by 30%.',
+           'Led web content optimization efforts including formatting checks, error correction, and broken link resolution using Monsido, resulting in a 20% increase in user engagement.',
         'Streamlined content workflows and prioritized metadata management, ensuring compliance with WCAG accessibility standards.',
-        'Led web content optimization efforts including formatting checks, error correction, and broken link resolution using Monsido, resulting in a 20% increase in user engagement.'
+        'Implemented PHP hooks to auto-sanitize text fields, reducing manual content entry tasks by 20%.'
       ],
       skills: ['Drupal', 'WCAG', 'Docker', 'PHP', 'ddev']
     },
@@ -32,7 +34,8 @@ function Experience() {
       dates: 'Nov. 2021 – Aug. 2022',
       description: [
         'Developed financial data solutions using .NET and Vue.js, enhancing portfolio analysis and attribution models.',
-        'Implemented notification systems, boosting responsiveness to critical updates by 20%.',
+        'Eliminated 2K+ lines of legacy code (Symbology Filters), improving system maintainability.',
+        'Built a real-time notifications (WebSocket) and guided UI workflows, reducing support tickets by 25%.',
         'Collaboratively reduced launch time by 50\% through code release automation, demonstrating proficiency in agile methodologies.'
       ],
       skills: ['.NET', 'Vue.js', 'TDD', 'JUnit', 'SonarQube', 'Swagger']
