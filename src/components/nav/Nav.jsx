@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./nav.css";
-import { AiOutlineHome, AiOutlineUser, AiOutlineBook, AiOutlineProject, AiOutlineMail } from "react-icons/ai";
+import {
+  AiOutlineHome,
+  AiOutlineUser,
+  AiOutlineBook,
+  AiOutlineProject,
+  AiOutlineMail,
+} from "react-icons/ai";
 import { FaTools, FaUserGraduate } from "react-icons/fa";
 import { RiStarLine } from "react-icons/ri";
 
@@ -18,7 +24,10 @@ const Nav = () => {
         const sectionHeight = section.offsetHeight;
         const sectionId = `#${section.getAttribute("id")}`;
 
-        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+        if (
+          scrollPosition >= sectionTop &&
+          scrollPosition < sectionTop + sectionHeight
+        ) {
           setActiveSection(sectionId);
         }
       });
@@ -30,26 +39,54 @@ const Nav = () => {
 
   return (
     <nav>
-      <a href="#home" aria-label="Home" className={activeSection === "#home" ? "active" : ""}>
+      <a
+        href="#home"
+        aria-label="Home"
+        className={activeSection === "#home" ? "active" : ""}
+      >
         <AiOutlineHome />
       </a>
-      <a href="#about" aria-label="About" className={activeSection === "#about" ? "active" : ""}>
+      <a
+        href="#about"
+        aria-label="About"
+        className={activeSection === "#about" ? "active" : ""}
+      >
         <AiOutlineUser />
       </a>
-      <a href="#experience" aria-label="Experience" className={activeSection === "#experience" ? "active" : ""}>
+      <a
+        href="#experience"
+        aria-label="Experience"
+        className={activeSection === "#experience" ? "active" : ""}
+      >
         <AiOutlineBook />
       </a>
-      <a href="#projects" aria-label="Projects" className={activeSection === "#projects" ? "active" : ""}>
+      <a
+        href="#projects"
+        aria-label="Projects"
+        className={activeSection === "#projects" ? "active" : ""}
+      >
         <FaTools />
       </a>
-      <a href="#activities" aria-label="Student Activities" className={activeSection === "#activities" ? "active" : ""}>
+      <a
+        href="#activities"
+        aria-label="Student Activities"
+        className={activeSection === "#activities" ? "active" : ""}
+      >
         <FaUserGraduate />
       </a>
-      <a href="#testimonials" aria-label="Testimonials" className={activeSection === "#testimonials" ? "active" : ""}>
+      <a
+        href="#testimonials"
+        aria-label="Testimonials"
+        className={activeSection === "#testimonials" ? "active" : ""}
+      >
         <RiStarLine />
       </a>
 
-      <a href="#contact" aria-label="Contact" className={activeSection === "#contact" ? "active" : ""}>
+      <a
+        href="#contact"
+        aria-label="Contact"
+        className={activeSection === "#contact" ? "active" : ""}
+      >
         <AiOutlineMail />
       </a>
     </nav>

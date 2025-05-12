@@ -4,7 +4,8 @@ import "./activities.css";
 const activities = [
   {
     role: "Web Designing and Technical Lead",
-    organization: "IEEE Women in Engineering International Leadership Summit, Nagpur",
+    organization:
+      "IEEE Women in Engineering International Leadership Summit, Nagpur",
     date: "Nov. 2020",
     description:
       "Led a team of three in building a website for the summit using WordPress.",

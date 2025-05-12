@@ -1,5 +1,6 @@
 .container.contact__container {
   width: 30%;
+  margin: 0 auto;
   gap: 12%;
 }
 
@@ -8,6 +9,15 @@ form {
   flex-direction: column;
   gap: 2rem;
   align-items: center;
+  transition: all 0.3s ease;
+}
+
+label {
+  align-self: flex-start;
+  font-size: 0.85rem;
+  color: var(--color-light);
+  margin-bottom: -1rem;
+  margin-top: -1.2rem;
 }
 
 input,
@@ -21,18 +31,70 @@ textarea {
   color: var(--color-white);
   font-family: "Montserrat", sans-serif;
   font-size: medium;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
 .btn {
   font-family: "Montserrat", sans-serif;
   font-size: medium;
   font-weight: 400;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: var(--color-primary);
+  transform: scale(1.02);
+}
+
+.form-status {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+  opacity: 0.85;
+}
+
+.form-status.success {
+  color: #4caf50;
+}
+
+.form-status.error {
+  color: #f44336;
+}
+
+.contact__intro {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: var(--color-light);
+  font-size: 1.1rem;
+}
+
+.alt-contact-note {
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: var(--color-light);
+  text-align: center;
+}
+
+.alt-contact-note a {
+  color: var(--color-primary);
+  text-decoration: underline;
 }
 
 /* ===== MEDIA CONFIG (Tablets) ===== */
 @media screen and (max-width: 1024px) {
   .container.contact__container {
     width: 60%;
-    grid-template-columns: 1fr;
     gap: 2rem;
   }
 }
@@ -41,7 +103,17 @@ textarea {
 @media screen and (max-width: 600px) {
   .container.contact__container {
     width: var(--container-width-md);
-    grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  input,
+  textarea {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
   }
 }

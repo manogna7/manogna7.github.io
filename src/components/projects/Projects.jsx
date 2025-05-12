@@ -33,7 +33,7 @@ const projects = [
     link: "https://github.com/manogna7/Decision-Making",
     image: require("./1.png"),
   },
-/*   {
+  /*   {
     id: 4,
     title: "AI534-Machine Learning",
     description:
@@ -111,9 +111,8 @@ const projects = [
       "Developed and maintained a website for Section Student Congress'19 to facilitate registration and submission of ideas from participants. Analyzed all Student Branches in Hyderabad Section and generated a report to revive inactive ones.",
     technologies: ["React", "JavaScript", "CSS"],
     image: require("./ssc.png"),
-  }
+  },
 ];
-
 
 const Projects = () => {
   const [modalProject, setModalProject] = useState(null);
@@ -156,8 +155,13 @@ const Projects = () => {
   };
 
   return (
-    <div className="projects__container">
+    <section id="projects" className="projects__container">
       <h2>Projects</h2>
+      <p className="projects__subtitle">
+        Always learning, always iterating, and always chasing that moment when
+        curiosity turns into impact.
+      </p>
+
       <Slider {...sliderSettings}>
         {projects.map((project) => (
           <div key={project.id} className="slider-item">
@@ -216,7 +220,7 @@ const Projects = () => {
           </div>
         </div>
       )}
-    </div>
+    </section>
   );
 };
 

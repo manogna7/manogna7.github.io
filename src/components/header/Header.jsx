@@ -1,19 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./header.css";
 import CTA from "./CTA";
 import HeaderSocial from "./HeaderSocial";
+import { startBlobAnim } from "./blob-anim/meta";
 
 const Header = () => {
-  // For typing animation
-  const headerText = "Hi, I’m Manogna";
+  const headerText = "Hi, I’m Manogna Challoju";
   const descriptionText =
-    "Software Engineer | Intern @ FlowAI | Expertise in Web Dev, Cloud Tech and AI";
+    "Software Engineer | Expertise in Web Dev, Cloud Tech and AI";
 
   const [headerIndex, setHeaderIndex] = useState(0);
   const [descriptionIndex, setDescriptionIndex] = useState(0);
   const [headerTypedText, setHeaderTypedText] = useState("");
   const [descriptionTypedText, setDescriptionTypedText] = useState("");
+  const canvasRef = useRef(null);
 
+  // Init blob animation
   const [mouseY, setMouseY] = useState(0);
   const [mouseX, setMouseX] = useState(0);
 
@@ -27,49 +29,65 @@ const Header = () => {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
+  useEffect(() => {
+    if (canvasRef.current) {
+      startBlobAnim(canvasRef.current);
+    }
+  }, []);
   // Typing animation for header
   useEffect(() => {
     if (headerIndex < headerText.length) {
       const timeout = setTimeout(() => {
         setHeaderTypedText((prev) => prev + headerText[headerIndex]);
         setHeaderIndex((prev) => prev + 1);
-      }, 100); // Adjust typing speed here
+      }, 100);
       return () => clearTimeout(timeout);
     }
   }, [headerIndex]);
 
   // Typing animation for description
   useEffect(() => {
-    if (headerIndex === headerText.length && descriptionIndex < descriptionText.length) {
+    if (
+      headerIndex === headerText.length &&
+      descriptionIndex < descriptionText.length
+    ) {
       const timeout = setTimeout(() => {
-        setDescriptionTypedText((prev) => prev + descriptionText[descriptionIndex]);
+        setDescriptionTypedText(
+          (prev) => prev + descriptionText[descriptionIndex],
+        );
         setDescriptionIndex((prev) => prev + 1);
-      }, 50); // Adjust typing speed here
+      }, 50);
       return () => clearTimeout(timeout);
     }
   }, [descriptionIndex, headerIndex]);
 
   return (
     <header>
+      <div className="load-img"></div>
+      <canvas ref={canvasRef} className="blob-canvas" />
       <div className="container header__container">
         {/* Typing Animation for Header */}
         <h1 className="hero-heading">
           {headerTypedText}
-          <span className="cursor">{headerIndex < headerText.length ? "|" : ""}</span> 
+          <span className="cursor">
+            {headerIndex < headerText.length ? "|" : ""}
+          </span>
         </h1>
 
         {/* Typing Animation for Description */}
         <p className="header__description">
           {descriptionTypedText}
-          <span className="cursor">{descriptionIndex < descriptionText.length ? "|" : ""}</span>
+          <span className="cursor">
+            {descriptionIndex < descriptionText.length ? "|" : ""}
+          </span>
         </p>
 
         <CTA />
         <HeaderSocial />
 
-        <h3 className="header__tagline">Exploring the universe, one line of code at a time.</h3>
-
-        {/* Space Helmet */}
+        <h3 className="header__tagline">
+          Exploring the universe, one line of code at a time.
+        </h3>
         <div className="space-helmet">
           <div className="helmet-border"></div>
           <div className="ear left-ear"></div>
@@ -116,7 +134,6 @@ const Header = () => {
         <a href="#contact" className="scroll__down">
           Scroll Down
         </a>
-        
       </div>
     </header>
   );

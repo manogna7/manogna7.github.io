@@ -27,7 +27,7 @@ header,
 
 /* Font Styling */
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   background: var(--color-bg);
   color: var(--color-secondary);
   line-height: 1.8;
@@ -88,7 +88,9 @@ header {
   font-size: 1rem;
 }
 
-h1, h2, p {
+h1,
+h2,
+p {
   color: var(--color-primary);
   margin: 0.5rem 0;
   animation: fadeIn 2s ease-in-out forwards;
@@ -128,7 +130,8 @@ p {
 }
 
 @keyframes bobbing {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(-3px);
   }
   50% {
@@ -141,7 +144,16 @@ p {
   width: 200px;
   height: 200px;
   background: conic-gradient(#ffb74d, #ff914d);
-  clip-path: polygon(50% 0%, 85% 15%, 100% 50%, 85% 85%, 50% 100%, 15% 85%, 0% 50%, 15% 15%);
+  clip-path: polygon(
+    50% 0%,
+    85% 15%,
+    100% 50%,
+    85% 85%,
+    50% 100%,
+    15% 85%,
+    0% 50%,
+    15% 15%
+  );
   position: relative;
   z-index: 2;
 }
@@ -171,7 +183,7 @@ p {
 }
 
 .ear::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 60px;
   height: 60px;
@@ -212,11 +224,10 @@ p {
   left: 50%;
   transform: translate(-50%, -50%);
   animation: blink 5s infinite;
-
 }
 
 .pupil::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 8px;
   height: 8px;
@@ -243,11 +254,10 @@ p {
   top: 150px; /* Adjusted for alignment */
   left: 50%;
   transform: translateX(-50%);
-  
+
   width: 50px;
   height: 25px; /* Controls the smile's height */
 }
-
 
 /* Whiskers */
 .whiskers {
@@ -283,7 +293,8 @@ p {
 }
 
 @keyframes wagging {
-  0%, 100% {
+  0%,
+  100% {
     transform: rotate(10deg);
   }
   50% {
@@ -292,7 +303,9 @@ p {
 }
 
 @keyframes blink {
-  0%, 90%, 100% {
+  0%,
+  90%,
+  100% {
     height: 30px;
   }
   95% {

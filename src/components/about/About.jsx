@@ -9,6 +9,9 @@ const About = () => {
   return (
     <section id="about">
       <h2>About Me</h2>
+      <p className="section__subtitle">
+        From ideas to execution - a quick look at my journey
+      </p>
 
       <div className="container about__container">
         {/* Profile Image Section */}
@@ -25,7 +28,7 @@ const About = () => {
             <article className="about__card">
               <FaAward className="about__icon" />
               <h5>Experience</h5>
-              <small>3+ Years in the Industry</small>
+              <small>4+ Years in the Industry</small>
             </article>
             <article className="about__card">
               <FiUsers className="about__icon" />
@@ -46,22 +49,18 @@ const About = () => {
 
           {/* About Text Section */}
           <p>
-            Bringing ideas to life — whether through code or brushstrokes — is
-            what truly makes me feel alive. I got into development because
-            computers have always fascinated me, and the magic they create by
-            transforming simple commands into incredible outcomes. Every bug I
-            come across and every skill I refine brings me closer to that sense
-            of wonder. I strive to bring creativity and technology together to
-            create something that will outlive me and leave a lasting impact.
+            I’ve always been someone who gets excited by possibility - whether
+            it’s designing a new interface, debugging an edge case, or sketching
+            at the end of the day. Code became my craft because it lets me build
+            things that are thoughtful, useful, and possibly that will outlive
+            me.
             <br />
-            With almost three years of experience, I’ve had the privilege of
-            working with clients across the globe, delivering innovative
-            solutions and driving impactful results. I thrive in dynamic
-            environments, always eager to learn, grow, and tackle new
-            challenges head-on.
+            Over the past few years, I’ve worked across continents and codebases
+            - from rebuilding legacy systems to developing AI tools that help
+            people work smarter.
             <br />
-            Thank you for stopping by! Feel free to reach out — I’d love to
-            connect and know about you. :)
+            Thanks for stopping by! Feel free to reach out - I’d love to connect
+            and hear your story. :)
           </p>
 
           <a href="#contact" className="btn btn-primary">

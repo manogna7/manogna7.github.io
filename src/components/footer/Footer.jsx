@@ -30,7 +30,11 @@ const Footer = () => {
       </ul>
 
       <div className="footer__socials">
-        <a href="https://www.linkedin.com/in/manognach/" target="_blank" rel="noreferrer">
+        <a
+          href="https://www.linkedin.com/in/manognach/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <BsLinkedin />
         </a>
         <a href="https://github.com/manogna7" target="_blank" rel="noreferrer">
@@ -39,18 +43,16 @@ const Footer = () => {
         <a href="manogna6864@gmail.com">
           <MdOutlineEmail />
         </a>
-        <a href="tel:5412862244">
-          <FiPhoneCall />
-        </a>
       </div>
 
       <div className="footer__copyright">
         <small>
-        <em>This is still a work in progress—stay tuned for more updates!</em><br></br>
-
-          Last Updated 8 December, 2024 
-          <br></br>&copy; Manogna Challoju. All
-          Rights Reserved.
+          <em>
+            This is still a work in progress - stay tuned for more updates!
+          </em>
+          <br></br>
+          Last Updated 12 May, 2025
+          <br></br>&copy; Manogna Challoju. All Rights Reserved.
         </small>
       </div>
     </footer>
