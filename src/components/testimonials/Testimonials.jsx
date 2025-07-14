@@ -23,12 +23,6 @@ const testimonials = [
     review:
       "Manogna was a Full-Stack lead engineer for all FEBATECH Applications under IT Services. She was responsible for delivering business outcomes for all complex and innovative projects, client needs, and strategic business goals. She acted as a servant leader, helped stakeholders make the right decisions, and provided recommendations aligned with the company's vision. She maintains a very cordial relationship with associates, shares knowledge with the team, and has a knack for working collaboratively and delivering the best to the customer.",
   },
-  {
-    avatar: require("./img1.jpg"),
-    name: "McKenzie Heryford",
-    review:
-      "Manogna is very efficient and detail-oriented when working on digital content maintenance audits. She learns quickly and always asks insightful questions. Manogna also crowdsources for troubleshooting as needed. She is an asset to our team.",
-  },
 ];
 
 const Testimonials = () => {
